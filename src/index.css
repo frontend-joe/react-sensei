@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: "Euclid Circular A";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input,
+button,
+select {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: "Euclid Circular A";
+  font-size: 1rem;
+  outline: none;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
