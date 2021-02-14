@@ -4,7 +4,7 @@
   "files": [
     "dist/*"
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
     "polished": "^4.1.0",
     "react": "^17.0.1",
@@ -23,9 +23,9 @@
     "styled-components": "^5.2.1"
   },
   "scripts": {
-    "publish:npm": "set NODE_ENV=production && rimraf dist && mkdir dist && babel src/components/library -d dist --copy-files",
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "publish:npm": "set NODE_ENV=production && rimraf dist && mkdir dist && babel src/components/library -d dist --copy-files"
   },
   "babel": {
     "presets": [

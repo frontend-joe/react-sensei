@@ -2,7 +2,7 @@
 
 UI Component Library for React that aims to be the cleanest
 
-![alt text](https://cdn.jsdelivr.net/gh/frontend-joe/assets@main/sensei3.png)
+![sensei logo](https://cdn.jsdelivr.net/gh/frontend-joe/assets@main/sensei4.png)
 
 ## Available Scripts
 
@@ -13,60 +13,43 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The app you will see here is used primarily to demonstrate our components via
+Instagram.
 
-### `npm test`
+Use the sidebar on the left to navigate between components.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+It's quite possible that the documentation for each component will reside here.
 
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I don't really use this much as the next script does pretty much the same thing.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Can be useful though when testing your React build.
 
-### `npm run eject`
+### `npm run publish:npm`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This script will create a /dist folder containing just the library of components.
 
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Setup styled-components theming
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Full guide on styling these components coming very soon.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The library relies heavily on a CSS in JS theme which is basically a plain JavaScript object similar to the following:
 
-### Code Splitting
+```javascript
+export default {
+  colorPrimary: "#6A26CD",
+  colorPrimaryText: "white",
+  colorDefaultBackground: "#f3f3f9",
+  colorDefaultText: "#73707C",
+};
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I'm still deciding whether to make the package work out of the box _without_ a CSS in JS theme environment.
