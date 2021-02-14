@@ -2,8 +2,8 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { Frame, Bottom, Middle, Top } from "./shared";
 
-import CleanButton from "components/reactzilla/buttons/cleanButton/Example";
-import SimpleCard from "components/reactzilla/cards/simpleCard/Example";
+import CleanButton from "components/library/buttons/cleanButton/Example";
+import SimpleCard from "components/library/cards/simpleCard/Example";
 
 const Example = ({ setTheme, isDarkTheme }) => {
   return (

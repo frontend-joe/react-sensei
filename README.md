@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# react-sensei
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+UI Component Library for React that aims to be the cleanest
+
+![alt text](https://cdn.jsdelivr.net/gh/frontend-joe/assets@main/)
 
 ## Available Scripts
 

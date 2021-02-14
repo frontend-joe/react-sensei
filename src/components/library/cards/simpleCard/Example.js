@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { SimpleCard } from "components/reactzilla";
+import { SimpleCard } from "components/library";
 
 const StyledWrapper = styled.div`
   width: 360px;
