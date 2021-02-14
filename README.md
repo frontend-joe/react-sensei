@@ -2,7 +2,7 @@
 
 UI Component Library for React that aims to be the cleanest
 
-![sensei logo](https://cdn.jsdelivr.net/gh/frontend-joe/assets@main/sensei6.png)
+![sensei logo](https://cdn.jsdelivr.net/gh/frontend-joe/assets@main/sensei7.png)
 
 ## Available Scripts
 
