@@ -6,6 +6,7 @@ body {
 }
 
 * {
+  line-height: 1;
   box-sizing: border-box;
 }
 
@@ -25,6 +26,7 @@ select {
   border: 0;
   font-family: "Euclid Circular A";
   font-size: 1rem;
+  background: transparent;
   outline: none;
 }
 

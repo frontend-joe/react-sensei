@@ -1,0 +1,35 @@
+{
+  "title": "CleanButton",
+  "options": [
+    {
+      "name": "children",
+      "purpose": "Text displayed inside the button",
+      "default": "undefined",
+      "type": "String"
+    },
+    {
+      "name": "onClick",
+      "purpose": "Function invoked when button is clicked",
+      "default": "undefined",
+      "type": "Function"
+    },
+    {
+      "name": "isPrimary",
+      "purpose": "Sets the theme to primary colors",
+      "default": "false",
+      "type": "Boolean"
+    },
+    {
+      "name": "isAccent",
+      "purpose": "Sets the theme to accent colors",
+      "default": "false",
+      "type": "Boolean"
+    },
+    {
+      "name": "isDefault",
+      "purpose": "Sets the theme to default colors",
+      "default": "false",
+      "type": "Boolean"
+    }
+  ]
+}

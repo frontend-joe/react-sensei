@@ -1,0 +1,35 @@
+{
+  "title": "Card",
+  "options": [
+    {
+      "name": "children",
+      "purpose": "Content displayed inside the card",
+      "default": "undefined",
+      "type": "Component / String"
+    },
+    {
+      "name": "cardTitle",
+      "purpose": "Set a simple title for the card",
+      "default": "undefined",
+      "type": "String"
+    },
+    {
+      "name": "isPrimary",
+      "purpose": "Sets the background of the card to our primary color",
+      "default": "undefined",
+      "type": "Boolean"
+    },
+    {
+      "name": "isAccent",
+      "purpose": "Sets the background of the card to our accent color",
+      "default": "undefined",
+      "type": "Boolean"
+    },
+    {
+      "name": "noBottomMargin",
+      "purpose": "Hides the default bottom margin",
+      "default": "false",
+      "type": "Boolean"
+    }
+  ]
+}

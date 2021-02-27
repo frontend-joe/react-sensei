@@ -1,0 +1,23 @@
+{
+  "title": "StatIconCard",
+  "options": [
+    {
+      "name": "label",
+      "purpose": "The smaller text label displayed",
+      "default": "undefined",
+      "type": "String"
+    },
+    {
+      "name": "value",
+      "purpose": "The larger text value displayed",
+      "default": "undefined",
+      "type": "String"
+    },
+    {
+      "name": "icon",
+      "purpose": "The icon title from https://iconscout.com/unicons/explore/line",
+      "default": "bars",
+      "type": "String"
+    }
+  ]
+}

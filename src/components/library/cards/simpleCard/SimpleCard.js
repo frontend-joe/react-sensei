@@ -12,8 +12,8 @@ const accent = css`
 `;
 
 const Card = styled.div`
-  padding: ${(p) => p.theme.customPadding || 0};
-  margin-bottom: ${(p) => !p.noBottomMargin && p.theme.lengthMd};
+  padding: ${(p) => (p.hasTitle ? 0 : p.theme.lenMd1)};
+  margin-bottom: ${(p) => !p.noBottomMargin && p.theme.lenMd1};
   border-radius: ${(p) => p.theme.borderRadius};
   background: ${(p) => p.theme.colorCardBackground};
   color: ${(p) => p.theme.colorText};
@@ -22,27 +22,18 @@ const Card = styled.div`
   ${(p) => p.isAccent && accent};
 `;
 
-const flexStyles = css`
-  align-items: ${(p) => p.alignItems || "flex-start"};
-  justify-content: ${(p) => p.justifyContent || "flex-start"};
-`;
-
 const CardContent = styled.div`
-  display: ${(p) => (p.isFlex ? "flex" : "block")};
-  padding: ${(p) =>
-    p.hasTitle
-      ? `0 ${p.theme.lengthMd}  ${p.theme.lengthMd}`
-      : p.theme.lengthMd};
+  padding: 0 ${(p) => p.theme.lenMd3} ${(p) => p.theme.lenMd3};
 `;
 
 const CardTitle = styled.div`
-  height: 3rem;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid ${(p) => p.theme.colorBorder};
-  padding: 0 ${(p) => p.theme.lengthMd};
+  justify-content: center;
+  height: ${(p) => p.theme.lenXl2};
+  padding: 0 ${(p) => p.theme.lenMd1};
   color: ${(p) => p.theme.colorLabel};
-  margin-bottom: ${(p) => p.theme.lengthMd};
+  font-size: ${(p) => p.theme.lenMd2};
 `;
 
 export default ({
@@ -50,32 +41,24 @@ export default ({
   cardTitle,
   isPrimary,
   isAccent,
-  isFlex,
-  flexDirection,
-  alignItems,
-  justifyContent,
-  customPadding,
   noBottomMargin,
   ...rest
 }) => {
   return (
     <Card
-      {...rest}
+      hasTitle={cardTitle}
       isPrimary={isPrimary}
       isAccent={isAccent}
-      customPadding={customPadding}
       noBottomMargin={noBottomMargin}
+      {...rest}
     >
-      {cardTitle && <CardTitle>{cardTitle}</CardTitle>}
-      <CardContent
-        isFlex={isFlex}
-        flexDirection={flexDirection}
-        alignItems={alignItems}
-        justifyContent={justifyContent}
-        hasTitle={cardTitle}
-      >
-        {children}
-      </CardContent>
+      {cardTitle && (
+        <>
+          <CardTitle>{cardTitle}</CardTitle>
+          <CardContent>{children}</CardContent>
+        </>
+      )}
+      {!cardTitle && children}
     </Card>
   );
 };

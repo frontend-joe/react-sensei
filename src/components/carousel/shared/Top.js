@@ -9,9 +9,14 @@ const StyledWrapper = styled.div`
   padding: 0 28px;
 `;
 
-const StyledUrl = styled.div`
+const StyledUrl = styled.button`
   font-weight: 500;
+  font-size: 1.635rem;
   color: ${(p) => p.theme.colorLabel};
+
+  &:hover {
+    color: ${(p) => p.theme.colorText};
+  }
 `;
 
 const switchDarkColor = "#272d2f";
@@ -52,10 +57,10 @@ const StyledSwitchKnob = styled.div`
   ${(p) => p.isOn && knobOn};
 `;
 
-const Top = ({ isDarkTheme, setTheme }) => {
+const Top = ({ setDocsOpen, isDarkTheme, setTheme }) => {
   return (
     <StyledWrapper>
-      <StyledUrl>github.com/vuezy/cleanzilla</StyledUrl>
+      <StyledUrl onClick={() => setDocsOpen(true)}>Docs</StyledUrl>
       <StyledSwitchWrapper onClick={setTheme} isOn={isDarkTheme}>
         <StyledSwitchKnob isOn={isDarkTheme} />
       </StyledSwitchWrapper>

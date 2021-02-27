@@ -62,7 +62,7 @@ const CleanButton = styled.button`
   justify-content: center;
   width: 100%;
   min-width: 140px;
-  padding: 1.035rem 1rem;
+  padding: 1.035rem ${(p) => p.theme.lenMd1};
   border-radius: ${(p) => p.theme.borderRadius};
 
   transition-property: color, background, box-shadow;

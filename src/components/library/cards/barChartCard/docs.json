@@ -1,0 +1,23 @@
+{
+  "title": "BarChartCard",
+  "options": [
+    {
+      "name": "cardTitle",
+      "purpose": "The title of the card",
+      "default": "undefined",
+      "type": "String"
+    },
+    {
+      "name": "label",
+      "purpose": "Label shown on InfoStack above the chart",
+      "default": "undefined",
+      "type": "String"
+    },
+    {
+      "name": "value",
+      "purpose": "Value shown on InfoStack above the chart",
+      "default": "undefined",
+      "type": "String"
+    }
+  ]
+}

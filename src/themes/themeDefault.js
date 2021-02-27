@@ -1,11 +1,9 @@
-export default {
-  borderRadius: "0.75rem",
-  lengthXxl: "2rem",
-  lengthXl: "1.5rem",
-  lengthLg: "1.25rem",
-  lengthMd: "1rem",
-  lengthSm: "0.875rem",
-  lengthXs: "0.75rem",
-  lengthXxs: "0.5rem",
-  lengthXxxs: "0.325rem",
+import { rgba } from "polished";
+
+const theme = {
+  colorForDark1: rgba("white", 0.96),
+  colorForDark2: rgba("white", 0.65),
+  colorForDark3: rgba("white", 0.45),
 };
+
+export default theme;

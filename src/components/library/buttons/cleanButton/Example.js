@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { SimpleCard, CleanButton } from "components/library";
+import { Card, CleanButton } from "components/library";
 
 const StyledButtonWrapper = styled.div`
   margin-bottom: 1rem;
@@ -8,7 +8,7 @@ const StyledButtonWrapper = styled.div`
 
 export default () => {
   return (
-    <SimpleCard style={{ width: "220px" }}>
+    <Card style={{ width: "220px" }}>
       <StyledButtonWrapper>
         <CleanButton isPrimary>Primary</CleanButton>
       </StyledButtonWrapper>
@@ -19,6 +19,6 @@ export default () => {
         <CleanButton isDefault>Default</CleanButton>
       </StyledButtonWrapper>
       <CleanButton disabled>Disabled</CleanButton>
-    </SimpleCard>
+    </Card>
   );
 };

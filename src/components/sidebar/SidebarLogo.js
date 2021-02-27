@@ -9,5 +9,5 @@ const StyledWrapper = styled.div`
 `;
 
 export default () => {
-  return <StyledWrapper>cleanzilla</StyledWrapper>;
+  return <StyledWrapper>react-sensei</StyledWrapper>;
 };

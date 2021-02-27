@@ -8,6 +8,7 @@ import Sidebar from "components/sidebar/Sidebar";
 
 export default () => {
   const [theme, setTheme] = useState({ ...themeDefault, ...themeLight });
+
   const [isDarkTheme, setDarkTheme] = useState(false);
 
   const handleThemeSet = () => {

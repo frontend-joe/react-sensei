@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { SimpleCard } from "components/library";
+import { Card } from "components/library";
 
 const StyledWrapper = styled.div`
   width: 360px;
@@ -9,11 +9,11 @@ const StyledWrapper = styled.div`
 export default () => {
   return (
     <StyledWrapper>
-      <SimpleCard cardTitle="Simple Card">
-        I'm a simple card with a title
-      </SimpleCard>
-      <SimpleCard isPrimary>I'm a simple primary card</SimpleCard>
-      <SimpleCard isAccent>I'm a simple accent card</SimpleCard>
+      <Card cardTitle="Simple Card">I'm a simple card with a title</Card>
+      <Card isPrimary>I'm a simple primary card</Card>
+      <Card isAccent noBottomMargin>
+        I'm a simple accent card
+      </Card>
     </StyledWrapper>
   );
 };

@@ -9,7 +9,7 @@ const StyledWrapper = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   width: 220px;
