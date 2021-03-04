@@ -40,9 +40,8 @@ const StyledWrapper = styled.div`
 `;
 
 const StyledContent = styled(PerfectScrollbar)`
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   overflow: auto;
-
   padding: 0 ${(p) => p.theme.lenMd3} 0;
 `;
 
