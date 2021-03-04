@@ -6,7 +6,7 @@ import NavbarLogo from "./NavbarLogo";
 import NavbarNav from "./NavbarNav";
 
 const StyledWrapper = styled.div`
-  flex: 0 1 auto;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   width: 100%;
