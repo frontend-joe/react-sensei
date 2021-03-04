@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  font-family: "Euclid Circular A";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,11 +10,9 @@ body {
 }
 
 html,
-body {
+body,
+#root {
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 input,
@@ -24,7 +21,7 @@ select {
   padding: 0;
   margin: 0;
   border: 0;
-  font-family: "Euclid Circular A";
+  font-family: inherit;
   font-size: 1rem;
   background: transparent;
   outline: none;
@@ -33,6 +30,10 @@ select {
 button,
 a {
   cursor: pointer;
+}
+
+button {
+  background: transparent;
 }
 
 a {

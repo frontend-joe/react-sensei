@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { Card, CleanButton } from "components/library";
 
@@ -8,17 +7,19 @@ const StyledButtonWrapper = styled.div`
 
 export default () => {
   return (
-    <Card style={{ width: "220px" }}>
-      <StyledButtonWrapper>
-        <CleanButton isPrimary>Primary</CleanButton>
-      </StyledButtonWrapper>
-      <StyledButtonWrapper>
-        <CleanButton isAccent>Accent</CleanButton>
-      </StyledButtonWrapper>
-      <StyledButtonWrapper>
-        <CleanButton isDefault>Default</CleanButton>
-      </StyledButtonWrapper>
-      <CleanButton disabled>Disabled</CleanButton>
-    </Card>
+    <div className="col-lg-8 offset-lg-2">
+      <Card>
+        <StyledButtonWrapper>
+          <CleanButton isPrimary>Primary</CleanButton>
+        </StyledButtonWrapper>
+        <StyledButtonWrapper>
+          <CleanButton isAccent>Accent</CleanButton>
+        </StyledButtonWrapper>
+        <StyledButtonWrapper>
+          <CleanButton isDefault>Default</CleanButton>
+        </StyledButtonWrapper>
+        <CleanButton disabled>Disabled</CleanButton>
+      </Card>
+    </div>
   );
 };

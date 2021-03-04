@@ -1,5 +1,7 @@
 {
   "title": "BarChartCard",
+  "updated": "03/02/2021",
+  "githubPath": "cards/barChartCard",
   "options": [
     {
       "name": "cardTitle",
@@ -18,6 +20,12 @@
       "purpose": "Value shown on InfoStack above the chart",
       "default": "undefined",
       "type": "String"
+    },
+    {
+      "name": "series",
+      "purpose": "Data associated with the chart",
+      "default": "undefined",
+      "type": "Array"
     }
   ]
 }

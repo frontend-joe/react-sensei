@@ -1,12 +1,15 @@
 import { rgba } from "polished";
+import themeDefault from "./themeDefault";
 
 const colorTextForDark = rgba("white", 0.96);
 
 export default {
+  ...themeDefault,
   borderRadius: "0.75rem",
   colorBackground: "#f0f0f9",
-  colorText: "#73707C",
-  colorLabel: "#ACAAB7",
+  colorNavbar: "#100f10",
+  colorText: "#343239",
+  colorLabel: "#A4A3A6",
   colorBorder: "#f0f0f9",
   colorPrimary: "#6A26CD",
   colorPrimaryText: colorTextForDark,
@@ -17,6 +20,7 @@ export default {
   colorDefaultText: "#73707C",
   colorDisabledBackground: "#d5d5e3",
   colorDisabledText: "#bebed0",
+  colorCode: "#100f10",
   lenSm1: "0.25rem",
   lenSm2: "0.5rem",
   lenSm3: "0.75rem",

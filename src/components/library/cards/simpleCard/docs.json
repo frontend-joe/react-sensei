@@ -1,5 +1,7 @@
 {
   "title": "Card",
+  "updated": "03/02/2021",
+  "githubPath": "cards/simpleCard",
   "options": [
     {
       "name": "children",

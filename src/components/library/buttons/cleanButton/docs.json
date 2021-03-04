@@ -1,5 +1,7 @@
 {
   "title": "CleanButton",
+  "updated": "03/02/2021",
+  "githubPath": "buttons/cleanButton",
   "options": [
     {
       "name": "children",

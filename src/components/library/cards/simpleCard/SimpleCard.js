@@ -12,7 +12,7 @@ const accent = css`
 `;
 
 const Card = styled.div`
-  padding: ${(p) => (p.hasTitle ? 0 : p.theme.lenMd1)};
+  padding: ${(p) => (p.hasTitle ? 0 : p.theme.lenMd3)};
   margin-bottom: ${(p) => !p.noBottomMargin && p.theme.lenMd1};
   border-radius: ${(p) => p.theme.borderRadius};
   background: ${(p) => p.theme.colorCardBackground};

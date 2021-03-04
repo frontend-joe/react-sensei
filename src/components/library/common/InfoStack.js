@@ -12,7 +12,15 @@ const StyledWrapper = styled.div`
 const StyledValue = styled.div`
   margin-bottom: ${(p) => p.theme.lenSm1};
   color: ${(p) => p.theme.colorText};
-  font-size: ${(p) => p.theme.lenMd3};
+  font-size: ${(p) => p.theme.lenMd2};
+
+  @media (min-width: ${(p) => p.theme.screenWidthXs}) {
+    font-size: ${(p) => p.theme.lenMd3};
+  }
+
+  @media (min-width: ${(p) => p.theme.screenWidthSm}) {
+    font-size: ${(p) => p.theme.lenLg1};
+  }
 `;
 
 const StyledLabel = styled.div`
@@ -20,9 +28,9 @@ const StyledLabel = styled.div`
   font-size: ${(p) => p.theme.lenMd1};
 `;
 
-const Wrapper = ({ label, value, hideBottomMargin }) => {
+const Wrapper = ({ label, value, hideBottomMargin, ...rest }) => {
   return (
-    <StyledWrapper hideBottomMargin={hideBottomMargin}>
+    <StyledWrapper hideBottomMargin={hideBottomMargin} {...rest}>
       <StyledValue>{value}</StyledValue>
       <StyledLabel>{label}</StyledLabel>
     </StyledWrapper>

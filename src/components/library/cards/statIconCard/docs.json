@@ -1,5 +1,7 @@
 {
   "title": "StatIconCard",
+  "updated": "03/02/2021",
+  "githubPath": "cards/statIconCard",
   "options": [
     {
       "name": "label",
@@ -15,9 +17,11 @@
     },
     {
       "name": "icon",
-      "purpose": "The icon title from https://iconscout.com/unicons/explore/line",
+      "purpose": "The icon title from the icon pack we are using",
       "default": "bars",
-      "type": "String"
+      "type": "String",
+      "hyperlink": "https://iconscout.com/unicons/explore/line",
+      "hyperlinkText": "Click here for the icon docs"
     }
   ]
 }

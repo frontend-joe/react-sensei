@@ -1,15 +1,15 @@
 import React from "react";
-import styled from "styled-components";
 import { Card, PieChartCard } from "components/library";
-
-const StyledWrapper = styled.div`
-  width: 260px;
-`;
 
 export default () => {
   return (
-    <StyledWrapper>
-      <PieChartCard cardTitle="Earnings" label="Target" value="$53k" />
-    </StyledWrapper>
+    <div className="col-lg-6 offset-lg-3">
+      <PieChartCard
+        cardTitle="Earnings"
+        label="Target"
+        value="$53k"
+        series={[30, 40, 45]}
+      />
+    </div>
   );
 };

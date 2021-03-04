@@ -1,10 +1,5 @@
 import React from "react";
-import styled from "styled-components";
 import { Card, AreaChartCard } from "components/library";
-
-const StyledWrapper = styled.div`
-  width: 450px;
-`;
 
 const series = [
   {
@@ -21,25 +16,25 @@ const series = [
   },
 ];
 
-export default () => {
-  const statList = [
-    {
-      label: "Revenue",
-      value: "$34.5k",
-    },
-    {
-      label: "Profit",
-      value: "$2.5k",
-    },
-    {
-      label: "Orders",
-      value: "811",
-    },
-  ];
+const statList = [
+  {
+    label: "Revenue",
+    value: "$34.5k",
+  },
+  {
+    label: "Profit",
+    value: "$2.5k",
+  },
+  {
+    label: "Orders",
+    value: "811",
+  },
+];
 
+export default () => {
   return (
-    <StyledWrapper>
+    <div className="col-lg-8 offset-lg-2">
       <AreaChartCard cardTitle="Sales" statList={statList} series={series} />
-    </StyledWrapper>
+    </div>
   );
 };

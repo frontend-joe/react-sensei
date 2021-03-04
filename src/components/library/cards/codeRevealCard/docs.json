@@ -1,0 +1,13 @@
+{
+  "title": "CodeRevealCard",
+  "updated": "03/02/2021",
+  "githubPath": "cards/barChartCard",
+  "options": [
+    {
+      "name": "code",
+      "purpose": "The 5 digit code revealed by the component",
+      "default": "undefined",
+      "type": "String"
+    }
+  ]
+}

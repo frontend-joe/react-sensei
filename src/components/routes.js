@@ -1,3 +1,5 @@
+import SalesDashboard from "components/demo/dashboards/SalesDashboard";
+
 import CleanButton from "components/library/buttons/cleanButton/Example";
 import cleanButtonDocs from "components/library/buttons/cleanButton/docs";
 
@@ -16,42 +18,66 @@ import areaChartCardDocs from "components/library/cards/areaChartCard/docs";
 import BarChartCard from "components/library/cards/barChartCard/Example";
 import barChartCardDocs from "components/library/cards/barChartCard/docs";
 
+// import CodeRevealCard from "components/library/cards/codeRevealCard/Example";
+// import codeRevealCardDocs from "components/library/cards/codeRevealCard/docs";
+
 export default [
   {
-    path: "/",
+    path: "/buttons/clean",
     exact: true,
-    name: "Clean button",
+    name: "Clean",
     example: CleanButton,
     docs: cleanButtonDocs,
+    isButton: true,
   },
   {
+    path: "/dashboards/sales",
+    exact: true,
+    name: "Sales",
+    example: SalesDashboard,
+    docs: {},
+    isDashboard: true,
+  },
+  // {
+  //   path: "/cards/code-reveal-card",
+  //   name: "Code Reveal",
+  //   example: CodeRevealCard,
+  //   docs: codeRevealCardDocs,
+  //   isCard: true,
+  // },
+  {
     path: "/cards/simple-card",
-    name: "Simple card",
+    name: "Simple",
     example: SimpleCard,
     docs: simpleCardDocs,
+    isCard: true,
   },
   {
     path: "/cards/stat-icon-card",
-    name: "Stat icon card",
+    name: "Stat icon",
     example: StatIconCard,
     docs: statIconCardDocs,
+    isCard: true,
   },
   {
     path: "/cards/pie-chart-card",
-    name: "Pie chart card",
+    name: "Pie chart",
     example: PieChartCard,
     docs: pieChartCardDocs,
+    isCard: true,
   },
   {
     path: "/cards/area-chart-card",
-    name: "Area chart card",
+    name: "Area chart",
     example: AreaChartCard,
     docs: areaChartCardDocs,
+    isCard: true,
   },
   {
     path: "/cards/bar-chart-card",
-    name: "Bar chart card",
+    name: "Bar chart",
     example: BarChartCard,
     docs: barChartCardDocs,
+    isCard: true,
   },
 ];

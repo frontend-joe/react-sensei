@@ -33,23 +33,30 @@ Can be useful though when testing your React build.
 
 This script will create a /dist folder containing just the library of components.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Setup environment
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The component is built on styled components and currently relies on a theme
+being applied via ThemeProvider.
 
-## Setup styled-components theming
-
-Full guide on styling these components coming very soon.
-
-The library relies heavily on a CSS in JS theme which is basically a plain JavaScript object similar to the following:
+### 1. Install styled-components
 
 ```javascript
-export default {
-  colorPrimary: "#6A26CD",
-  colorPrimaryText: "white",
-  colorDefaultBackground: "#f3f3f9",
-  colorDefaultText: "#73707C",
-};
+npm i styled-components
 ```
 
-I'm still deciding whether to make the package work out of the box _without_ a CSS in JS theme environment.
+### 2. Import chosen theme and wrap your whole app in a ThemeProvider
+
+```javascript
+import { ThemeProvider } from "styled-components";
+import { StatIconCard, themeDark as theme } from "react-sensei";
+
+const App = () => (
+  <ThemeProvider theme={theme}>
+    <StatIconCard label="Revenue" value="$34k" icon="dollar-alt" />
+  </ThemeProvider>
+);
+
+export default App;
+```
+
+When the library becomes fully stable I will release the full theme file so you can compose your own.

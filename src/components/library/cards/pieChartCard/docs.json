@@ -1,6 +1,14 @@
 {
-  "title": "StatIconCard",
+  "title": "PieChartCard",
+  "updated": "03/02/2021",
+  "githubPath": "cards/pieChartCard",
   "options": [
+    {
+      "name": "cardTitle",
+      "purpose": "The title of the card",
+      "default": "undefined",
+      "type": "String"
+    },
     {
       "name": "label",
       "purpose": "The smaller text label displayed",
@@ -14,10 +22,10 @@
       "type": "String"
     },
     {
-      "name": "icon",
-      "purpose": "The icon title from https://iconscout.com/unicons/explore/line",
-      "default": "bars",
-      "type": "String"
+      "name": "series",
+      "purpose": "Data associated with the chart",
+      "default": "undefined",
+      "type": "Array"
     }
   ]
 }

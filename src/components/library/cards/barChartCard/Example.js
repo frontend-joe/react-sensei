@@ -1,10 +1,5 @@
 import React from "react";
-import styled from "styled-components";
 import { Card, BarChartCard } from "components/library";
-
-const StyledWrapper = styled.div`
-  width: 260px;
-`;
 
 const series = [
   {
@@ -19,13 +14,13 @@ const series = [
 
 export default () => {
   return (
-    <StyledWrapper>
+    <div className="col-lg-6 offset-lg-3">
       <BarChartCard
         cardTitle="Users"
         label="Today"
         value="234"
         series={series}
       />
-    </StyledWrapper>
+    </div>
   );
 };

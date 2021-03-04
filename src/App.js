@@ -1,21 +1,24 @@
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { BrowserRouter as Router } from "react-router-dom";
-import { themeDefault, themeDark, themeLight } from "themes";
+import { themeDark, themeLight } from "components/library/themes";
 
-import Example from "components/carousel/Example";
-import Sidebar from "components/sidebar/Sidebar";
+import Demo from "components/demo/Wrapper";
 
 export default () => {
-  const [theme, setTheme] = useState({ ...themeDefault, ...themeLight });
+  const [theme, setTheme] = useState(themeDark);
 
-  const [isDarkTheme, setDarkTheme] = useState(false);
+  const [isDarkTheme, setDarkTheme] = useState(true);
 
-  const handleThemeSet = () => {
-    if (isDarkTheme) {
-      setTheme({ ...themeDefault, ...themeLight });
+  const handleThemeSet = (selectedTheme) => {
+    if (selectedTheme) {
+      setTheme(selectedTheme);
     } else {
-      setTheme({ ...themeDefault, ...themeDark });
+      if (isDarkTheme) {
+        setTheme(themeLight);
+      } else {
+        setTheme(themeDark);
+      }
     }
 
     setDarkTheme(!isDarkTheme);
@@ -24,8 +27,7 @@ export default () => {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <Sidebar />
-        <Example setTheme={handleThemeSet} isDarkTheme={isDarkTheme} />
+        <Demo setTheme={handleThemeSet} isDarkTheme={isDarkTheme} />
       </Router>
     </ThemeProvider>
   );
