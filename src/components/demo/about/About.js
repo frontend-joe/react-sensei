@@ -14,11 +14,12 @@ const StyledWrapper = styled(PerfectScrollbar)`
   width: 100%;
   overflow: auto;
   height: 100%;
-  padding: ${(p) => p.theme.lenLg2};
+  padding: ${(p) => p.theme.lenMd3};
   background: ${(p) => p.theme.colorCardBackground};
 
   @media (min-width: ${(p) => p.theme.screenWidthMd}) {
     width: 40%;
+    padding: ${(p) => p.theme.lenLg2};
   }
 `;
 
