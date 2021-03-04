@@ -42,7 +42,7 @@ const StyledTheme = styled.button`
 const StyledThemePrimary = styled.div`
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
-  height: 100%;
+  height: ${(p) => p.theme.lenLg1};
   width: 50%;
   background: ${(p) => p.background};
 `;
@@ -50,7 +50,7 @@ const StyledThemePrimary = styled.div`
 const StyledThemeAccent = styled.div`
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
-  height: 100%;
+  height: ${(p) => p.theme.lenLg1};
   width: 50%;
   background: ${(p) => p.background};
 `;
