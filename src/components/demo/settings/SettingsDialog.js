@@ -32,6 +32,7 @@ const StyledThemesWrapper = styled.div`
 `;
 
 const StyledTheme = styled.button`
+  flex: 0 0 ${(p) => p.theme.lenLg1};
   display: flex;
   width: ${(p) => p.theme.lenLg1};
   height ${(p) => p.theme.lenLg1};
