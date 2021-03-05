@@ -10,7 +10,7 @@ const sharedWrapperStyles = css`
   display: flex;
   flex-direction: row;
   overflow: auto;
-  height: ${(p) => p.theme.lenXl2};
+  height: ${(p) => p.theme.lenLg3};
   padding: 0 ${(p) => p.theme.lenMd3} ${(p) => p.theme.lenMd3};
 
   @media (min-width: ${(p) => p.theme.screenWidthMd}) {

@@ -23,7 +23,7 @@ const StyledBackground = styled.div`
   left: 0;
   top: 0;
   width: 100%;
-  height: ${(p) => p.theme.lenXl1};
+  height: ${(p) => p.theme.lenLg3};
   background: ${(p) => p.theme.colorPrimary};
 
   @media (min-width: ${(p) => p.theme.screenWidthXs}) {

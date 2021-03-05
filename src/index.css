@@ -5,7 +5,6 @@ body {
 }
 
 * {
-  scroll-behavior: smooth;
   line-height: 1;
   box-sizing: border-box;
 }
