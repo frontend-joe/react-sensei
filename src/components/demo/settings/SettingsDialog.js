@@ -1,6 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { themeLight, themeDark } from "components/library";
+import {
+  themeLight,
+  themeDark,
+  themeWhite,
+  themeDarkRed,
+} from "components/library";
+import { v4 as uuidv4 } from "uuid";
 
 const StyledWrapper = styled.div`
   position: fixed;
@@ -55,6 +61,8 @@ const StyledThemeAccent = styled.div`
   background: ${(p) => p.background};
 `;
 
+const themes = [themeLight, themeDark, themeWhite, themeDarkRed];
+
 const Wrapper = ({
   isSettingsOpen,
   setSettingsOpen,
@@ -65,16 +73,13 @@ const Wrapper = ({
     <StyledWrapper isOpen={isSettingsOpen}>
       <StyledHeader>Settings</StyledHeader>
       <StyledSection>Theme</StyledSection>
-
       <StyledThemesWrapper>
-        <StyledTheme onClick={() => setTheme(themeLight)}>
-          <StyledThemePrimary background={themeLight.colorBackground} />
-          <StyledThemeAccent background={themeLight.colorPrimary} />
-        </StyledTheme>
-        <StyledTheme onClick={() => setTheme(themeDark)}>
-          <StyledThemePrimary background={themeDark.colorBackground} />
-          <StyledThemeAccent background={themeDark.colorPrimary} />
-        </StyledTheme>
+        {themes.map((theme) => (
+          <StyledTheme key={uuidv4()} onClick={() => setTheme(theme)}>
+            <StyledThemePrimary background={theme.colorBackground} />
+            <StyledThemeAccent background={theme.colorPrimary} />
+          </StyledTheme>
+        ))}
       </StyledThemesWrapper>
     </StyledWrapper>
   );

@@ -27,6 +27,18 @@ const theme = {
   fontWeightRegular: 300,
   heightCardMd: "360px",
   heightChartMd: "150px",
+  lenSm1: "0.25rem",
+  lenSm2: "0.5rem",
+  lenSm3: "0.75rem",
+  lenMd1: "1rem",
+  lenMd2: "1.25rem",
+  lenMd3: "1.5rem",
+  lenLg1: "2rem",
+  lenLg2: "3rem",
+  lenLg3: "4rem",
+  lenXl1: "5rem",
+  lenXl2: "6rem",
+  lenXl3: "7rem",
 };
 
 export default theme;

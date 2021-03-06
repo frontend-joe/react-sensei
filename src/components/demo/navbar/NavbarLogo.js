@@ -35,13 +35,12 @@ const StyledBackground = styled.div`
   }
 `;
 
-const StyledImageLink = styled(Link)``;
-
 const StyledImage = styled.img`
   position: relative;
   z-index: 1;
   width: 25%;
   border-radius: ${(p) => p.theme.lenSm2};
+  box-shadow: ${(p) => p.theme.boxShadowLogo};
 
   @media (min-width: ${(p) => p.theme.screenWidthXs}) {
     width: 20%;
@@ -56,9 +55,9 @@ export default () => {
   return (
     <StyledWrapper>
       <StyledBackground />
-      <StyledImageLink to="/">
+      <Link to="/">
         <StyledImage src={createImageCdnLink("sensei2.png")} />
-      </StyledImageLink>
+      </Link>
     </StyledWrapper>
   );
 };

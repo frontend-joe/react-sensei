@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 
 const primary = css`
   background: ${(p) => p.theme.colorPrimary};
-  color: white;
+  color: ${(p) => p.theme.colorPrimaryText};
 
   &:focus {
     box-shadow: 0 0 0 4px ${(p) => rgba(p.theme.colorPrimary, 0.4)};
@@ -13,7 +13,7 @@ const primary = css`
 
 const accent = css`
   background: ${(p) => p.theme.colorAccent};
-  color: white;
+  color: ${(p) => p.theme.colorAccentText};
 
   &:focus {
     box-shadow: 0 0 0 4px ${(p) => rgba(p.theme.colorAccent, 0.4)};

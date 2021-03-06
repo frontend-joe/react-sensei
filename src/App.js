@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { BrowserRouter as Router } from "react-router-dom";
-import { themeDark, themeLight } from "components/library/themes";
+import { themeDark, themeLight } from "components/library";
 
 import Demo from "components/demo/Wrapper";
 

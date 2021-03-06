@@ -45,7 +45,7 @@ const StyledSectionLabel = styled.div`
     display: block;
     padding: ${(p) => p.theme.lenMd3} 0;
     margin: 0 ${(p) => p.theme.lenMd3};
-    color: ${(p) => p.theme.colorLabel};
+    color: ${(p) => p.theme.colorNavbarLabel};
     font-size: ${(p) => p.theme.lenMd1};
   }
 `;
@@ -57,7 +57,7 @@ const StyledNavLink = styled(NavLink)`
   height: 100%;
   white-space: nowrap;
   padding: 0 ${(p) => p.theme.lenMd3};
-  color: ${(p) => p.theme.colorPrimaryText};
+  color: ${(p) => p.theme.colorNavbarLink};
   background: ${rgba("white", 0.2)};
   margin-right: 1rem;
   border-radius: ${(p) => p.theme.borderRadius};
