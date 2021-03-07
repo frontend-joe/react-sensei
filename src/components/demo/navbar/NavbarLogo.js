@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { createImageCdnLink } from "../utils";
+import { SenseiLogo } from "components/library";
 
 const StyledWrapper = styled.div`
   position: relative;
@@ -35,7 +36,15 @@ const StyledBackground = styled.div`
   }
 `;
 
-const StyledImage = styled.img`
+const StyledLink = styled(Link)`
+  width: 100%;
+`;
+
+const StyledSvgBackground = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
   position: relative;
   z-index: 1;
   width: 25%;
@@ -55,9 +64,11 @@ export default () => {
   return (
     <StyledWrapper>
       <StyledBackground />
-      <Link to="/">
-        <StyledImage src={createImageCdnLink("sensei2.png")} />
-      </Link>
+      <StyledLink to="/">
+        <StyledSvgBackground>
+          <SenseiLogo />
+        </StyledSvgBackground>
+      </StyledLink>
     </StyledWrapper>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, BarChartCard } from "components/library";
+import { BarChartCard } from "components/library";
 
 const series = [
   {

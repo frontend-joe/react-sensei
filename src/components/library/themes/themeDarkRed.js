@@ -5,6 +5,7 @@ const colorLabel = rgba("white", 0.57);
 const colorText = rgba("white", 0.96);
 
 export default {
+  id: "darkRed",
   ...themeDefault,
   borderRadius: "1rem",
   colorBackground: "#242424",

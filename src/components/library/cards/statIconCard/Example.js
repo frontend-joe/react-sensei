@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, StatIconCard } from "components/library";
+import { StatIconCard } from "components/library";
 
 export default () => {
   return (

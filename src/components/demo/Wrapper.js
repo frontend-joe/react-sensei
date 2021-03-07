@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Switch } from "react-router-dom";
 
-import { Overlay } from "components/library";
+import { Overlay, SettingsToggle } from "components/library";
 
 import routes from "components/routes";
 
@@ -10,9 +10,8 @@ import AppRoute from "./AppRoute";
 import Navbar from "./navbar/Navbar";
 import Global from "./styles/Global";
 import Bootstrap from "./styles/Bootstrap";
-import SettingsToggle from "./settings/SettingsToggle";
-import SettingsDialog from "./settings/SettingsDialog";
 import About from "./about/About";
+import Settings from "./settings/Settings";
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -45,11 +44,10 @@ const Wrapper = ({ setTheme, isDarkTheme }) => {
       <Bootstrap />
       <Navbar />
       <SettingsToggle onClick={() => setSettingsOpen(true)} />
-      <SettingsDialog
-        setTheme={setTheme}
-        isDarkTheme={isDarkTheme}
+      <Settings
         isSettingsOpen={isSettingsOpen}
         setSettingsOpen={setSettingsOpen}
+        setTheme={setTheme}
       />
       <Switch>
         <AppRoute

@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, AreaChartCard } from "components/library";
+import { AreaChartCard } from "components/library";
 
 const series = [
   {

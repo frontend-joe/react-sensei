@@ -6,6 +6,7 @@ const colorLabel = "#A4A3A6";
 const colorText = "#343239";
 
 export default {
+  id: "white",
   ...themeDefault,
   borderRadius: "0.75rem",
   colorBackground: "#f0f0f9",

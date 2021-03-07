@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, PieChartCard } from "components/library";
+import { PieChartCard } from "components/library";
 
 export default () => {
   return (
