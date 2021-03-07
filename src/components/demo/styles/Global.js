@@ -2,7 +2,11 @@ import { createGlobalStyle } from "styled-components";
 
 const Global = createGlobalStyle`
   html {
-    font-family: ${(p) => p.theme.fontFamily};
+    font-family: ${(p) =>
+      p.theme
+        .fontFamily}, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+          "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+          sans-serif;
   }
 
   body {

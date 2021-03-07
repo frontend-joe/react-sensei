@@ -1,9 +1,5 @@
 import { rgba } from "polished";
 
-const fontFamily = `Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-      sans-serif`;
-
 const theme = {
   gutterWidth: "0.5rem",
   containerMaxWidthXs: "100%",
@@ -21,10 +17,10 @@ const theme = {
   colorForDark1: rgba("white", 0.96),
   colorForDark2: rgba("white", 0.65),
   colorForDark3: rgba("white", 0.45),
-  fontFamily,
-  fontWeightBold: 700,
-  fontWeightSemibold: 600,
-  fontWeightRegular: 300,
+  fontFamily: "Poppins",
+  fontWeightBold: 600,
+  fontWeightSemibold: 500,
+  fontWeightRegular: 400,
   heightCardMd: "360px",
   heightChartMd: "150px",
   lenSm1: "0.25rem",

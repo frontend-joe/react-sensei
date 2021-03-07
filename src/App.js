@@ -10,24 +10,31 @@ export default () => {
 
   const [isDarkTheme, setDarkTheme] = useState(true);
 
-  const handleThemeSet = (selectedTheme) => {
-    if (selectedTheme) {
-      setTheme(selectedTheme);
-    } else {
-      if (isDarkTheme) {
-        setTheme(themeLight);
-      } else {
-        setTheme(themeDark);
-      }
-    }
+  const handleThemeSet = (activeTheme) => {
+    setTheme({
+      ...activeTheme,
+      fontFamily: theme.fontFamily,
+    });
+  };
 
-    setDarkTheme(!isDarkTheme);
+  const handleFontSet = (activeFont) => {
+    setTheme({
+      ...theme,
+      fontFamily: activeFont.name,
+      fontWeightRegular: activeFont.fontWeightRegular,
+      fontWeightSemibold: activeFont.fontWeightSemibold,
+      fontWeightBold: activeFont.fontWeightBold,
+    });
   };
 
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <Demo setTheme={handleThemeSet} isDarkTheme={isDarkTheme} />
+        <Demo
+          setTheme={handleThemeSet}
+          setFont={handleFontSet}
+          isDarkTheme={isDarkTheme}
+        />
       </Router>
     </ThemeProvider>
   );

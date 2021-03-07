@@ -42,7 +42,7 @@ const Wrapper = ({ children, noFixedHeight, isLoading }) => {
 
   return !isLoading ? (
     <StyledOuterWrapper>
-      <StyledWrapper noFixedHeight={noFixedHeight}>
+      <StyledWrapper noFixedHeight={noFixedHeight ? 1 : 0}>
         <StyledSyntaxHighlighter language="jsx" style={style}>
           {formattedCode}
         </StyledSyntaxHighlighter>

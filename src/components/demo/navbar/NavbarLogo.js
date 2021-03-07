@@ -57,6 +57,7 @@ const StyledSvgBackground = styled.div`
 
   @media (min-width: ${(p) => p.theme.screenWidthMd}) {
     width: 100%;
+    min-height: 172px;
   }
 `;
 

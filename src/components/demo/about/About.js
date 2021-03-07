@@ -82,7 +82,7 @@ const Wrapper = () => {
 
       <DocSectionSubheader>1. Install dependencies</DocSectionSubheader>
       <br />
-      <DocCode noFixedHeight>{scInstall}</DocCode>
+      <DocCode noFixedHeight={1}>{scInstall}</DocCode>
 
       <DocSectionSubheader>2. Setup theming</DocSectionSubheader>
       <DocParagraph>
@@ -94,7 +94,7 @@ const Wrapper = () => {
         .
       </DocParagraph>
       <DocCodeHeader>App.js</DocCodeHeader>
-      <DocCode noFixedHeight>{scEnv}</DocCode>
+      <DocCode noFixedHeight={1}>{scEnv}</DocCode>
 
       <DocSectionSubheader>3. Unicons</DocSectionSubheader>
       <DocParagraph>

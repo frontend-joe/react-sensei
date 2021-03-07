@@ -157,7 +157,7 @@ const Docs = ({ docs, setDocsOpen, isDocsOpen }) => {
         <StyledSectionHeader>Example</StyledSectionHeader>
         {codeError && <StyledCodeError>{codeError}</StyledCodeError>}
         {!codeError && (
-          <DocCode isLoading={code === ""} noFixedHeight>
+          <DocCode isLoading={code === ""} noFixedHeight={1}>
             {code}
           </DocCode>
         )}

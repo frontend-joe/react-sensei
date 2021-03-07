@@ -8,6 +8,8 @@ import {
   themeWhiteGreen,
   themeDarkRed,
   themeDarkGold,
+  themeDarkOrange,
+  themeLightClaret,
   useStyledTheme,
 } from "../";
 
@@ -15,6 +17,8 @@ const circleSize = "2rem";
 
 const StyledThemesWrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  margin-bottom: ${(p) => p.theme.lenSm2};
 `;
 
 const StyledTheme = styled.button`
@@ -24,6 +28,7 @@ const StyledTheme = styled.button`
   width: ${circleSize};
   height ${circleSize};
   margin-right: ${(p) => p.theme.lenSm3};
+  margin-bottom: ${(p) => p.theme.lenMd1};
 `;
 
 const sharedThemeStyles = css`
@@ -68,6 +73,8 @@ const themes = [
   themeDarkRed,
   themeDarkGold,
   themeWhiteGreen,
+  themeDarkOrange,
+  themeLightClaret,
 ];
 
 const Wrapper = ({ extraThemes, setTheme }) => {
@@ -83,7 +90,7 @@ const Wrapper = ({ extraThemes, setTheme }) => {
         <StyledTheme key={uidv4()} onClick={() => setTheme(t)}>
           {t.id === theme.id && (
             <StyledBadge>
-              <i class="uil uil-check"></i>
+              <i className="uil uil-check"></i>
             </StyledBadge>
           )}
 
