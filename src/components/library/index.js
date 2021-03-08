@@ -1,4 +1,4 @@
-export { default as Sensei } from "./Sensei";
+export { default as SenseiProvider } from "./SenseiProvider";
 
 export { default as useStyledTheme } from "./hooks/useStyledTheme";
 

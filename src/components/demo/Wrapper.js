@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Switch } from "react-router-dom";
 
-import { Sensei, Overlay, SettingsToggle } from "components/library";
+import { Overlay, SettingsToggle } from "components/library";
 
 import routes from "components/routes";
 
@@ -33,52 +33,50 @@ const Wrapper = ({ setTheme, setFont, isDarkTheme }) => {
     setSettingsOpen(false);
   };
   return (
-    <Sensei>
-      <StyledWrapper>
-        <Overlay
-          zIndex={5}
-          onClick={handleOverlayClicked}
-          isVisible={isOverlayVisible}
+    <StyledWrapper>
+      <Overlay
+        zIndex={5}
+        onClick={handleOverlayClicked}
+        isVisible={isOverlayVisible}
+      />
+      <Bootstrap />
+      <Navbar />
+      <SettingsToggle onClick={() => setSettingsOpen(true)} />
+      <Settings
+        isSettingsOpen={isSettingsOpen}
+        setSettingsOpen={setSettingsOpen}
+        setTheme={setTheme}
+        setFont={setFont}
+      />
+      <Switch>
+        <AppRoute
+          exact
+          path="/"
+          component={About}
+          hideDocs
+          setDocsOpen={setDocsOpen}
+          isDocsOpen={isDocsOpen}
         />
-        <Bootstrap />
-        <Navbar />
-        <SettingsToggle onClick={() => setSettingsOpen(true)} />
-        <Settings
-          isSettingsOpen={isSettingsOpen}
-          setSettingsOpen={setSettingsOpen}
-          setTheme={setTheme}
-          setFont={setFont}
-        />
-        <Switch>
+        {routes.map((route) => (
           <AppRoute
-            exact
-            path="/"
-            component={About}
-            hideDocs
+            key={route.path}
+            exact={route.exact}
+            path={route.path}
+            component={route.example}
+            docs={route.docs}
             setDocsOpen={setDocsOpen}
             isDocsOpen={isDocsOpen}
+            isDashboard={route.isDashboard}
           />
-          {routes.map((route) => (
-            <AppRoute
-              key={route.path}
-              exact={route.exact}
-              path={route.path}
-              component={route.example}
-              docs={route.docs}
-              setDocsOpen={setDocsOpen}
-              isDocsOpen={isDocsOpen}
-              isDashboard={route.isDashboard}
-            />
-          ))}
-          <AppRoute
-            component={About}
-            hideDocs
-            setDocsOpen={setDocsOpen}
-            isDocsOpen={isDocsOpen}
-          />
-        </Switch>
-      </StyledWrapper>
-    </Sensei>
+        ))}
+        <AppRoute
+          component={About}
+          hideDocs
+          setDocsOpen={setDocsOpen}
+          isDocsOpen={isDocsOpen}
+        />
+      </Switch>
+    </StyledWrapper>
   );
 };
 

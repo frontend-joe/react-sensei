@@ -10,8 +10,7 @@ const sharedWrapperStyles = css`
   display: flex;
   flex-direction: row;
   overflow: auto;
-  height: ${(p) => p.theme.lenLg3};
-  padding: 0 ${(p) => p.theme.lenMd3} ${(p) => p.theme.lenMd3};
+  padding: 0 ${(p) => p.theme.lenMd3} 0;
 
   @media (min-width: ${(p) => p.theme.screenWidthMd}) {
     flex-direction: column;
@@ -50,32 +49,46 @@ const StyledSectionLabel = styled.div`
   }
 `;
 
-const StyledNavLink = styled(NavLink)`
+const StyledNavLinkButton = styled.span`
   position: relative;
   display: flex;
   align-items: center;
-  height: 100%;
   white-space: nowrap;
   padding: 0 ${(p) => p.theme.lenMd3};
+  height: ${(p) => p.theme.lenLg2};
   color: ${(p) => p.theme.colorNavbarLink};
   background: ${rgba("white", 0.2)};
-  margin-right: 1rem;
   border-radius: ${(p) => p.theme.borderRadius};
-
-  &.active {
-    background: ${(p) => p.theme.colorPrimary};
-    color: ${(p) => p.theme.colorPrimaryText};
-  }
 
   @media (min-width: ${(p) => p.theme.screenWidthMd}) {
     background: transparent;
     height: auto;
     font-size: ${(p) => p.theme.lenMd1};
     padding: ${(p) => p.theme.lenSm3} ${(p) => p.theme.lenMd2};
-    margin: 0 ${(p) => p.theme.lenMd3} ${(p) => p.theme.lenSm2};
+    width: 100%;
     border-radius: ${(p) => p.theme.lenLg1};
+  }
+`;
 
-    &.active {
+const StyledNavLink = styled(NavLink)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: ${(p) => p.theme.lenXl1};
+  padding: ${(p) => p.theme.lenMd1} ${(p) => p.theme.lenSm2}
+    ${(p) => p.theme.lenMd1} 0;
+
+  &.active ${StyledNavLinkButton} {
+    background: ${(p) => p.theme.colorPrimary};
+    color: ${(p) => p.theme.colorPrimaryText};
+  }
+
+  @media (min-width: ${(p) => p.theme.screenWidthMd}) {
+    padding: 0 ${(p) => p.theme.lenMd3};
+    height: auto;
+    margin-bottom: ${(p) => p.theme.lenSm2};
+
+    &.active ${StyledNavLinkButton} {
       color: #fff;
 
       & svg {
@@ -107,35 +120,37 @@ const BadgeSvg = () => (
 );
 
 export default () => {
-  const dashboards = routes.filter((obj) => obj.isDashboard);
-  const buttons = routes.filter((obj) => obj.isButton);
-  const cards = routes.filter((obj) => obj.isCard);
+  const dashboards = {
+    name: "Dashboards",
+    routes: routes.filter((obj) => obj.isDashboard),
+  };
 
-  const NavMenu = () => (
-    <>
-      <StyledSectionLabel>Dashboards</StyledSectionLabel>
-      {dashboards.map((route) => (
-        <StyledNavLink key={route.name} exact={route.exact} to={route.path}>
-          {route.name}
-          <BadgeSvg />
-        </StyledNavLink>
-      ))}
-      <StyledSectionLabel>Buttons</StyledSectionLabel>
-      {buttons.map((route) => (
-        <StyledNavLink key={route.name} exact={route.exact} to={route.path}>
-          {route.name}
-          <BadgeSvg />
-        </StyledNavLink>
-      ))}
-      <StyledSectionLabel>Cards</StyledSectionLabel>
-      {cards.map((route) => (
-        <StyledNavLink key={route.name} exact={route.exact} to={route.path}>
-          {route.name}
-          <BadgeSvg />
-        </StyledNavLink>
-      ))}
-    </>
-  );
+  const buttons = {
+    name: "Buttons",
+    routes: routes.filter((obj) => obj.isButton),
+  };
+
+  const cards = {
+    name: "Cards",
+    routes: routes.filter((obj) => obj.isCard),
+  };
+
+  const menu = [dashboards, buttons, cards];
+
+  const NavMenu = () =>
+    menu.map((m) => (
+      <>
+        <StyledSectionLabel>{m.name}</StyledSectionLabel>
+        {m.routes.map((route) => (
+          <StyledNavLink key={route.name} exact={route.exact} to={route.path}>
+            <StyledNavLinkButton>
+              {route.name}
+              <BadgeSvg />
+            </StyledNavLinkButton>
+          </StyledNavLink>
+        ))}
+      </>
+    ));
 
   return (
     <>

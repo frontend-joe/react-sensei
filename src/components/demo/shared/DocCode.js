@@ -4,7 +4,6 @@ import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import jsx from "react-syntax-highlighter/dist/esm/languages/prism/jsx";
 import prism from "react-syntax-highlighter/dist/esm/styles/prism/prism";
 import { vscDarkPlus as style } from "react-syntax-highlighter/dist/esm/styles/prism";
-import PerfectScrollbar from "react-perfect-scrollbar";
 import DocCodeSkeleton from "./DocCodeSkeleton";
 
 SyntaxHighlighter.registerLanguage("jsx", jsx);
@@ -14,7 +13,7 @@ const StyledOuterWrapper = styled.div`
   border-radius: ${(p) => p.theme.lenSm2} !important;
 `;
 
-const StyledWrapper = styled(PerfectScrollbar)`
+const StyledWrapper = styled.div`
   height: ${(p) => (p.noFixedHeight ? "auto" : "240px")} !important;
   max-height: 400px;
   overflow: auto;

@@ -3,7 +3,6 @@ import axios from "axios";
 import styled, { css } from "styled-components";
 import { rgba } from "polished";
 import { DocCode } from "../shared";
-import PerfectScrollbar from "react-perfect-scrollbar";
 
 import Moment from "react-moment";
 
@@ -39,7 +38,7 @@ const StyledWrapper = styled.div`
   }
 `;
 
-const StyledContent = styled(PerfectScrollbar)`
+const StyledContent = styled.div`
   flex: 0 1 auto;
   overflow: auto;
   padding: 0 ${(p) => p.theme.lenMd3} 0;

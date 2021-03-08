@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import PerfectScrollbar from "react-perfect-scrollbar";
 import {
   DocHeader,
   DocParagraph,
@@ -10,7 +9,7 @@ import {
   DocCodeHeader,
 } from "../shared";
 
-const StyledWrapper = styled(PerfectScrollbar)`
+const StyledWrapper = styled.div`
   width: 100%;
   overflow: auto;
   height: 100%;

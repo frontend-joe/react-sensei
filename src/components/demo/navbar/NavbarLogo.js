@@ -10,7 +10,6 @@ const StyledWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   padding: ${(p) => p.theme.lenMd3} ${(p) => p.theme.lenMd3} 0;
-  margin-bottom: ${(p) => p.theme.lenMd3};
 
   @media (min-width: ${(p) => p.theme.screenWidthMd}) {
     justify-content: center;

@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { BrowserRouter as Router } from "react-router-dom";
-import { themeDark, themeLight } from "components/library";
+import { SenseiProvider, themeDark } from "components/library";
 
 import Demo from "components/demo/Wrapper";
 
 export default () => {
   const [theme, setTheme] = useState(themeDark);
-
-  const [isDarkTheme, setDarkTheme] = useState(true);
 
   const handleThemeSet = (activeTheme) => {
     setTheme({
@@ -28,14 +26,10 @@ export default () => {
   };
 
   return (
-    <ThemeProvider theme={theme}>
+    <SenseiProvider theme={theme}>
       <Router>
-        <Demo
-          setTheme={handleThemeSet}
-          setFont={handleFontSet}
-          isDarkTheme={isDarkTheme}
-        />
+        <Demo setTheme={handleThemeSet} setFont={handleFontSet} />
       </Router>
-    </ThemeProvider>
+    </SenseiProvider>
   );
 };

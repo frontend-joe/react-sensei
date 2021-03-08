@@ -25,7 +25,7 @@ export default [
   {
     path: "/buttons/clean",
     exact: true,
-    name: "Clean",
+    name: "Clean Button",
     example: CleanButton,
     docs: cleanButtonDocs,
     isButton: true,
@@ -33,7 +33,7 @@ export default [
   {
     path: "/dashboards/sales",
     exact: true,
-    name: "Sales",
+    name: "Dashboard 1",
     example: SalesDashboard,
     docs: {},
     isDashboard: true,
@@ -47,7 +47,7 @@ export default [
   // },
   {
     path: "/cards/simple-card",
-    name: "Simple",
+    name: "Card",
     example: SimpleCard,
     docs: simpleCardDocs,
     isCard: true,

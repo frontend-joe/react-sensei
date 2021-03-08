@@ -8,7 +8,6 @@ const StyledCard = styled(Card)`
   align-items: center;
   justify-content: space-between;
   padding: ${(p) => p.theme.lenLg1} ${(p) => p.theme.lenMd3};
-  color: red;
 `;
 
 const StyledLabel = styled.div`
