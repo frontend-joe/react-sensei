@@ -35,28 +35,29 @@ This script will create a /dist folder containing just the library of components
 
 ## Setup environment
 
-The component is built on styled components and currently relies on a theme
-being applied via ThemeProvider.
+Sensei relies on your entire app being wrapped inside a SenseiProvider
+component with a single theme prop.
 
-### 1. Install styled-components
+### 1. Install react-sensei
 
 ```javascript
-npm i styled-components
+npm i react-sensei
 ```
 
-### 2. Import chosen theme and wrap your whole app in a ThemeProvider
+### 2. Import chosen theme and wrap your whole app in a SenseiProvider
 
 ```javascript
-import { ThemeProvider } from "styled-components";
-import { StatIconCard, themeDark as theme } from "react-sensei";
+import { SenseiProvider, themeDark as theme } from "react-sensei";
 
-const App = () => (
-  <ThemeProvider theme={theme}>
-    <StatIconCard label="Revenue" value="$34k" icon="dollar-alt" />
-  </ThemeProvider>
-);
+const App = () => <SenseiProvider theme={theme}>...</SenseiProvider>;
 
 export default App;
 ```
 
+[Click here for the full list of themes.](https://github.com/frontend-joe/react-sensei/tree/master/src/components/library/themes)
+
 When the library becomes fully stable I will release the full theme file so you can compose your own.
+
+### 3. Go build a dashboard!
+
+[Click here for the docs and examples.](https://react-sensei.com)

@@ -23,45 +23,22 @@ const StyledWrapper = styled.div`
 `;
 
 const scInstall = `
-  npm i react-sensei styled-components
-`;
-
-const scEnv = `
-import { ThemeProvider } from "styled-components";
-import { themeDark as theme } from "react-sensei";
-
-const App = () => (
-  <ThemeProvider theme={theme}>
-    ...
-  </ThemeProvider>
-);
-
-export default App;
+  npm i react-sensei
 `;
 
 const senseiSetup = `
-import { ThemeProvider } from "styled-components";
-import { themeDark as theme, Card } from "components/library/themes";
+import {
+  SenseiProvider,
+  themeDark as theme,
+} from "react-sensei";
 
 const App = () => (
-  <ThemeProvider theme={theme}>
-    <Card isPrimary>I'm a card</Card>
-  </ThemeProvider>
+  <SenseiProvider theme={theme}>
+    ...
+  </SenseiProvider>
 );
 
 export default App;
-`;
-
-const uniconsSetup = `
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
-    />
-  </head>
-</html>
 `;
 
 const Wrapper = () => {
@@ -70,32 +47,34 @@ const Wrapper = () => {
       <DocHeader title="react-sensei" subtitle="2 minutes ago" />
       <DocSectionHeader>Intro</DocSectionHeader>
       <DocParagraph>
-        Sensei is a UI component library built in React that aims to provide the
-        cleanest set of dashboards in town.
+        Sensei is a UI component library built for frontend React developers.
+        The primary focus is to make clean responsive dashboards... fast!
       </DocParagraph>
       <DocSectionHeader>Installation</DocSectionHeader>
-      <DocParagraph>
-        Sensei relies on a specific development environment that can be easily
-        set up in just a few minutes.
-      </DocParagraph>
 
-      <DocSectionSubheader>1. Install dependencies</DocSectionSubheader>
+      <DocSectionSubheader>1. Install react-sensei</DocSectionSubheader>
       <br />
       <DocCode noFixedHeight={1}>{scInstall}</DocCode>
 
-      <DocSectionSubheader>2. Setup theming</DocSectionSubheader>
+      <DocSectionSubheader>2. SenseiProvider and theme</DocSectionSubheader>
       <DocParagraph>
-        Styled components is a CSS pre-processer which makes theming via
-        JavaScript insanely easy. You can find the official documentation{" "}
-        <a href="https://styled-components.com/" target="_blank">
-          here
-        </a>
-        .
+        Sensei relies on your entire app being wrapped inside a SenseiProvider
+        component with a single theme prop.
       </DocParagraph>
-      <DocCodeHeader>App.js</DocCodeHeader>
-      <DocCode noFixedHeight={1}>{scEnv}</DocCode>
-
-      <DocSectionSubheader>3. Unicons</DocSectionSubheader>
+      <DocCode noFixedHeight={1}>{senseiSetup}</DocCode>
+      <DocParagraph>
+        The theme can be set statically, or toggled dynamically via a state
+        variable. You can find the{" "}
+        <a
+          href="https://github.com/frontend-joe/react-sensei/tree/master/src/components/library/themes"
+          target="_blank"
+        >
+          full list of themes here
+        </a>
+      </DocParagraph>
+      <DocSectionSubheader>3. Go build a dashboard!</DocSectionSubheader>
+      <DocParagraph>Follow the docs to compose dashboards 🚀</DocParagraph>
+      <DocSectionHeader>Icons used</DocSectionHeader>
       <DocParagraph>
         Unicons is a playfully elegant line icon pack made by the talented{" "}
         <a href="https://www.instagram.com/abdulldsgnr/" target="_blank">
@@ -105,12 +84,6 @@ const Wrapper = () => {
         <a href="https://iconscout.com/unicons/explore/line" target="_blank">
           here
         </a>
-      </DocParagraph>
-      <DocCodeHeader>index.html</DocCodeHeader>
-      <DocCode>{uniconsSetup}</DocCode>
-      <DocSectionSubheader>4. Go build a dashboard!</DocSectionSubheader>
-      <DocParagraph>
-        Use these components to make something special 😊
       </DocParagraph>
       <DocSectionHeader>Useful links</DocSectionHeader>
       <DocParagraph>
@@ -124,6 +97,11 @@ const Wrapper = () => {
         <br />
         <a href="https://www.npmjs.com/package/react-sensei" target="_blank">
           npmjs.com/package/react-sensei
+        </a>
+        <br />
+        <br />
+        <a href="https://frontendjoe.com" target="_blank">
+          frontendjoe.com
         </a>
       </DocParagraph>
       <DocSectionHeader>Support</DocSectionHeader>
