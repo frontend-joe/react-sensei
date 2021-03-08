@@ -4,7 +4,7 @@
   "files": [
     "dist/*"
   ],
-  "version": "0.1.12",
+  "version": "0.1.13",
   "dependencies": {
     "apexcharts": "^3.25.0",
     "axios": "^0.21.1",
