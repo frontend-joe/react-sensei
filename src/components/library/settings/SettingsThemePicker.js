@@ -2,14 +2,16 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { v4 as uidv4 } from "uuid";
 import {
-  themeLight,
+  themeLightPurple,
   themeDark,
   themeWhite,
   themeWhiteGreen,
   themeDarkRed,
   themeDarkGold,
+  themeDarkRoseGold,
   themeDarkOrange,
   themeLightClaret,
+  themeLightBlue,
   useStyledTheme,
 } from "../";
 
@@ -68,13 +70,15 @@ const StyledBadge = styled.span`
 
 const themes = [
   themeDark,
-  themeLight,
+  themeLightPurple,
   themeWhite,
   themeDarkRed,
   themeDarkGold,
   themeWhiteGreen,
   themeDarkOrange,
   themeLightClaret,
+  themeDarkRoseGold,
+  themeLightBlue,
 ];
 
 const Wrapper = ({ extraThemes, setTheme }) => {

@@ -14,12 +14,13 @@ export { default as AreaChartCard } from "./cards/areaChartCard/AreaChartCard";
 export { default as BarChartCard } from "./cards/barChartCard/BarChartCard";
 export { default as CodeRevealCard } from "./cards/codeRevealCard/CodeReveal";
 
-export { default as themeDefault } from "./themes/themeLight";
-export { default as themeLight } from "./themes/themeLight";
+export { default as themeLightPurple } from "./themes/themeLightPurple";
 export { default as themeLightClaret } from "./themes/themeLightClaret";
+export { default as themeLightBlue } from "./themes/themeLightBlue";
 export { default as themeDark } from "./themes/themeDark";
 export { default as themeDarkRed } from "./themes/themeDarkRed";
 export { default as themeDarkGold } from "./themes/themeDarkGold";
+export { default as themeDarkRoseGold } from "./themes/themeDarkRoseGold";
 export { default as themeDarkOrange } from "./themes/themeDarkOrange";
 export { default as themeWhite } from "./themes/themeWhite";
 export { default as themeWhiteGreen } from "./themes/themeWhiteGreen";

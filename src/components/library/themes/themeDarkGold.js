@@ -17,7 +17,7 @@ export default {
   colorBorder: "#393939",
   colorPrimary: "#a59268",
   colorPrimaryText: colorText,
-  colorAccent: "#fff",
+  colorAccent: "#f7f7f7",
   colorAccentText: "#1B1B1B",
   colorCardBackground: "#1B1B1B",
   colorDefaultBackground: "#2D2D2D",

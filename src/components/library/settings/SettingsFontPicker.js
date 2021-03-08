@@ -59,6 +59,9 @@ const fonts = [
   {
     name: "Varela Round",
   },
+  {
+    name: "Comfortaa",
+  },
   // "Montserrat",
   // "Sora",
   // "Red Hat Display",

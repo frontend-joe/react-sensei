@@ -8,7 +8,6 @@ import routes from "components/routes";
 
 import AppRoute from "./AppRoute";
 import Navbar from "./navbar/Navbar";
-import Global from "./styles/Global";
 import Bootstrap from "./styles/Bootstrap";
 import About from "./about/About";
 import Settings from "./settings/Settings";
@@ -41,7 +40,6 @@ const Wrapper = ({ setTheme, setFont, isDarkTheme }) => {
           onClick={handleOverlayClicked}
           isVisible={isOverlayVisible}
         />
-        <Global />
         <Bootstrap />
         <Navbar />
         <SettingsToggle onClick={() => setSettingsOpen(true)} />
