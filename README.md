@@ -5,22 +5,6 @@
 Sensei is a UI component library built for frontend React developers.
 The primary focus is to make clean responsive dashboards... fast!
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-
-### `npm run publish:npm`
-
-This script will create a /dist folder containing just the library of components.
-
 ## Installation
 
 Sensei relies on your entire app being wrapped inside a SenseiProvider
@@ -51,3 +35,19 @@ export default App;
 ### 3. Go build a dashboard!
 
 [Click here for the docs and examples.](https://react-sensei.com)
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.
+
+### `npm run publish:npm`
+
+This script will create a /dist folder containing just the library of components.

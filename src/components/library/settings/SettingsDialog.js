@@ -6,7 +6,7 @@ const StyledWrapper = styled.div`
   z-index: 5;
   right: 0;
   top: 0;
-  width: 300px;
+  width: 240px;
   height: 100%;
   padding: ${(p) => p.theme.lenMd3};
   transform: translateX(${(p) => (p.isOpen ? 0 : "100%")});

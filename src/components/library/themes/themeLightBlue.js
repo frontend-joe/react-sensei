@@ -8,7 +8,7 @@ export default {
   ...themeDefault,
   borderRadius: "0.75rem",
   colorBackground: "#f4f4f8",
-  colorNavbar: "#100f10",
+  colorNavbar: "#151939",
   colorNavbarLabel: rgba("white", 0.65),
   colorNavbarLink: colorTextForDark,
   colorText: "#343239",

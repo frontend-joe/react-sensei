@@ -14,6 +14,9 @@ const Wrapper = ({ cardTitle, label, value, series }) => {
       toolbar: {
         show: false,
       },
+      animations: {
+        enabled: false,
+      },
       stacked: true,
       zoom: { enabled: false },
     },
@@ -84,7 +87,9 @@ const Wrapper = ({ cardTitle, label, value, series }) => {
       <InfoStack value={value} label={label} />
 
       <ChartWrapper>
-        <Chart options={options} series={series} type="bar" height="100%" />
+        {options.fill && (
+          <Chart options={options} series={series} type="bar" height="100%" />
+        )}
       </ChartWrapper>
     </CardFixedHeight>
   );

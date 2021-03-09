@@ -28,6 +28,51 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <div id="preloader" class="theme-loading">
+      <div id="prespinner"></div>
+    </div>
+    <style>
+      #preloader {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #100f10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+        opacity: 0;
+        transition-property: visibility, opacity;
+        transition-duration: 0.35s;
+      }
+
+      #preloader.theme-loading {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg) scale(1);
+        }
+      }
+
+      #prespinner {
+        border-width: 10px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.15);
+        border-top-color: #fff;
+        width: 72px;
+        min-width: 72px;
+        height: 72px;
+        min-height: 72px;
+        border-radius: 50%;
+        animation: spin 1.5s infinite linear;
+      }
+    </style>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

@@ -47,21 +47,11 @@ const StyledRadioButton = styled.span`
 `;
 
 const fonts = [
-  {
-    name: "Poppins",
-  },
-  {
-    name: "Sora",
-  },
-  {
-    name: "Space Grotesk",
-  },
-  {
-    name: "Varela Round",
-  },
-  {
-    name: "Comfortaa",
-  },
+  "Poppins",
+  "Sora",
+  "Space Grotesk",
+  "Varela Round",
+  "Comfortaa",
   // "Montserrat",
   // "Sora",
   // "Red Hat Display",
@@ -79,21 +69,12 @@ const Wrapper = ({ setFont, extraFonts }) => {
       {fonts.map((font) => (
         <StyledFontLabel
           key={uidv4()}
-          htmlFor={font.name}
-          onChange={() =>
-            setFont({
-              name: font.name,
-              fontWeightRegular: 400,
-              fontWeightSemibold: 500,
-              fontWeightBold: 600,
-            })
-          }
+          htmlFor={font}
+          onChange={() => setFont(font)}
         >
-          <input type="radio" id={font.name} name="font" />
-          <StyledRadioButton isActive={isActive(font.name)}></StyledRadioButton>
-          <StyledFontText isActive={isActive(font.name)}>
-            {font.name}
-          </StyledFontText>
+          <input type="radio" id={font} name="font" />
+          <StyledRadioButton isActive={isActive(font)}></StyledRadioButton>
+          <StyledFontText isActive={isActive(font)}>{font}</StyledFontText>
         </StyledFontLabel>
       ))}
     </StyledWrapper>

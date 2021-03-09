@@ -37,6 +37,11 @@ const Wrapper = ({ cardTitle, value, label, series }) => {
   const theme = useStyledTheme();
 
   const [options, setOptions] = useState({
+    chart: {
+      animations: {
+        enabled: false,
+      },
+    },
     grid: {
       padding: {
         top: 40,
@@ -74,7 +79,14 @@ const Wrapper = ({ cardTitle, value, label, series }) => {
       <InfoStack value={value} label={label} />
       <StyledChart>
         <StyledChartWrapper>
-          <Chart options={options} series={series} type="donut" width="100%" />
+          {options.colors && (
+            <Chart
+              options={options}
+              series={series}
+              type="donut"
+              width="100%"
+            />
+          )}
         </StyledChartWrapper>
       </StyledChart>
     </StyledCard>

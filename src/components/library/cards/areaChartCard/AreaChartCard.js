@@ -25,6 +25,9 @@ const Wrapper = ({ cardTitle, statList, series }) => {
       toolbar: {
         show: false,
       },
+      animations: {
+        enabled: false,
+      },
       zoom: { enabled: false },
     },
     grid: {
@@ -72,21 +75,23 @@ const Wrapper = ({ cardTitle, statList, series }) => {
   });
 
   useEffect(() => {
-    let opacity = 0.65;
-    const colors = [
-      rgba(theme.colorDefaultBackground, opacity),
-      rgba(theme.colorAccent, opacity),
-      rgba(theme.colorPrimary, opacity),
-    ];
+    if (theme.id) {
+      let opacity = 0.65;
+      const colors = [
+        rgba(theme.colorDefaultBackground, opacity),
+        rgba(theme.colorAccent, opacity),
+        rgba(theme.colorPrimary, opacity),
+      ];
 
-    if (theme) {
-      setOptions({
-        ...options,
-        fill: {
-          type: "solid",
-          colors,
-        },
-      });
+      if (theme) {
+        setOptions({
+          ...options,
+          fill: {
+            type: "solid",
+            colors,
+          },
+        });
+      }
     }
   }, [theme]);
 
@@ -100,7 +105,9 @@ const Wrapper = ({ cardTitle, statList, series }) => {
         </StyledStatList>
       )}
       <ChartWrapper>
-        <Chart options={options} series={series} type="area" width="100%" />
+        {options.fill && (
+          <Chart options={options} series={series} type="area" width="100%" />
+        )}
       </ChartWrapper>
     </CardFixedHeight>
   );
