@@ -7,7 +7,7 @@ const primary = css`
   color: ${(p) => p.theme.colorPrimaryText};
 
   &:focus {
-    box-shadow: 0 0 0 4px ${(p) => rgba(p.theme.colorPrimary, 0.4)};
+    box-shadow: 0 0 0 4px ${(p) => rgba(p.theme.colorPrimary || "white", 0.4)};
   }
 `;
 
@@ -16,7 +16,7 @@ const accent = css`
   color: ${(p) => p.theme.colorAccentText};
 
   &:focus {
-    box-shadow: 0 0 0 4px ${(p) => rgba(p.theme.colorAccent, 0.4)};
+    box-shadow: 0 0 0 4px ${(p) => rgba(p.theme.colorAccent || "white", 0.4)};
   }
 `;
 
@@ -25,7 +25,8 @@ const def = css`
   color: ${(p) => p.theme.colorDefaultText};
 
   &:focus {
-    box-shadow: 0 0 0 4px ${(p) => rgba(p.theme.colorDefaultBackground, 0.74)};
+    box-shadow: 0 0 0 4px
+      ${(p) => rgba(p.theme.colorDefaultBackground || "white", 0.74)};
   }
 `;
 

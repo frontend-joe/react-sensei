@@ -35,6 +35,7 @@ const StyledWrapper = styled.div`
     width: 400px;
     max-width: 400px;
     min-width: 400px;
+    transition: none;
   }
 `;
 
