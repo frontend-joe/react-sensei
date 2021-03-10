@@ -11,7 +11,11 @@ const StyledExampleWrapper = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: ${(p) => (p.isDashboard ? "column" : "row")};
+  flex-direction: column;
+
+  @media (min-width: ${(p) => p.theme.screenWidthXl}) {
+    flex-direction: ${(p) => (p.isDashboard ? "column" : "row")};
+  }
 `;
 
 const AppRoute = ({

@@ -28,7 +28,7 @@ const StyledWrapper = styled.div`
     width: 50%;
   }
 
-  @media (min-width: ${(p) => p.theme.screenWidthLg}) {
+  @media (min-width: ${(p) => p.theme.screenWidthXl}) {
     display: flex;
     flex-direction: column;
     position: static;

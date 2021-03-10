@@ -6,7 +6,9 @@ import { InfoStack } from "../../";
 import { CardFixedHeight, ChartWrapper } from "../shared";
 
 const StyledChartHack = styled.div`
-  transform: translateX(25%);
+  & svg {
+    transform: translateX(25%);
+  }
 `;
 
 const Wrapper = ({ cardTitle, label, value, series }) => {
