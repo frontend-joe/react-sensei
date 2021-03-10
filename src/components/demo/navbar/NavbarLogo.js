@@ -1,23 +1,32 @@
 import React from "react";
 import styled from "styled-components";
+import { rgba } from "polished";
 import { Link } from "react-router-dom";
 import { createImageCdnLink } from "../utils";
 import { SenseiLogo } from "components/library";
 
 const StyledWrapper = styled.div`
   position: relative;
-  flex: 0 0 auto;
+  z-index: 2;
+  flex: 0 1 auto;
   display: flex;
-  justify-content: flex-start;
-  padding: ${(p) => p.theme.lenMd3} ${(p) => p.theme.lenMd3} 0;
+  justify-content: center;
+  align-items: center;
+  padding: 0 ${(p) => p.theme.lenMd1} 0;
+  background: ${(p) => p.theme.colorPrimary};
+  box-shadow: 0 0 10px ${rgba("black", 0.2)};
 
   @media (min-width: ${(p) => p.theme.screenWidthMd}) {
+    flex: 0 0 auto;
+    padding: ${(p) => p.theme.lenMd3};
     justify-content: center;
     margin-bottom: 0;
+    box-shadow: none;
   }
 `;
 
 const StyledBackground = styled.div`
+  display: none;
   position: absolute;
   z-index: 0;
   left: 0;
@@ -32,6 +41,7 @@ const StyledBackground = styled.div`
 
   @media (min-width: ${(p) => p.theme.screenWidthMd}) {
     height: ${(p) => p.theme.lenXl3};
+    display: block;
   }
 `;
 
@@ -46,16 +56,14 @@ const StyledSvgBackground = styled.div`
   background: white;
   position: relative;
   z-index: 1;
-  width: 25%;
-  border-radius: ${(p) => p.theme.lenSm2};
+  border-radius: ${(p) => p.theme.borderRadius};
   box-shadow: ${(p) => p.theme.boxShadowLogo};
-
-  @media (min-width: ${(p) => p.theme.screenWidthXs}) {
-    width: 20%;
-  }
+  width: ${(p) => p.theme.lenLg2};
+  height: ${(p) => p.theme.lenLg2};
 
   @media (min-width: ${(p) => p.theme.screenWidthMd}) {
     width: 100%;
+    height: auto;
     min-height: 172px;
   }
 `;

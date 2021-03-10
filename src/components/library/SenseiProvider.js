@@ -76,13 +76,11 @@ const Wrapper = ({
   }, [localStorageTheme, localStorageFont]);
 
   useEffect(() => {
-    const removeIconLoading = document
-      .getElementById("preloader")
-      .classList.remove("icon-loading");
+    const removeIconLoading = () =>
+      document.getElementById("preloader").classList.remove("icon-loading");
 
-    const removeFontLoading = document
-      .getElementById("preloader")
-      .classList.remove("font-loading");
+    const removeFontLoading = () =>
+      document.getElementById("preloader").classList.remove("font-loading");
 
     if (theme.id) {
       document.getElementById("preloader").classList.remove("theme-loading");
@@ -94,6 +92,12 @@ const Wrapper = ({
     document
       .getElementById("icon-script")
       .addEventListener("load", removeIconLoading);
+
+    setTimeout(() => {
+      removeIconLoading();
+      removeFontLoading();
+      document.getElementById("preloader").classList.remove("theme-loading");
+    }, 500);
 
     return () => {
       document

@@ -4,13 +4,15 @@ import { rgba } from "polished";
 import { NavLink } from "react-router-dom";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import routes from "components/routes";
+import { Badge } from "components/library";
 
 const sharedWrapperStyles = css`
   flex: 0 1 auto;
   display: flex;
   flex-direction: row;
+  align-items: center;
   overflow: auto;
-  padding: 0 ${(p) => p.theme.lenMd3} 0;
+  padding: 0 ${(p) => p.theme.lenMd3} 0 ${(p) => p.theme.lenSm2};
 
   @media (min-width: ${(p) => p.theme.screenWidthMd}) {
     flex-direction: column;
@@ -70,6 +72,14 @@ const StyledNavLinkButton = styled.span`
   }
 `;
 
+const StyledBadge = styled(Badge)`
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  right: ${(p) => p.theme.lenMd2};
+  transform: translateY(-50%);
+`;
+
 const StyledNavLink = styled(NavLink)`
   display: flex;
   align-items: center;
@@ -83,6 +93,10 @@ const StyledNavLink = styled(NavLink)`
     color: ${(p) => p.theme.colorPrimaryText};
   }
 
+  & ${StyledBadge} {
+    display: none;
+  }
+
   @media (min-width: ${(p) => p.theme.screenWidthMd}) {
     padding: 0 ${(p) => p.theme.lenMd3};
     height: auto;
@@ -91,48 +105,27 @@ const StyledNavLink = styled(NavLink)`
     &.active ${StyledNavLinkButton} {
       color: #fff;
 
-      & svg {
+      & ${StyledBadge} {
         display: block;
       }
     }
   }
 `;
 
-const StyledBadgeSvg = styled.svg`
-  display: none;
-  position: absolute;
-  z-index: 3;
-  top: 50%;
-  right: ${(p) => p.theme.lenMd2};
-  transform: translateY(-50%);
-`;
-
-const BadgeSvg = () => (
-  <StyledBadgeSvg
-    width="8"
-    height="8"
-    viewBox="0 0 8 8"
-    fill="white"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <circle cx="4" cy="4" r="4" fill="#ffffff" />
-  </StyledBadgeSvg>
-);
-
 export default () => {
   const dashboards = {
     name: "Dashboards",
-    routes: routes.filter((obj) => obj.isDashboard),
+    routes: routes.filter((obj) => obj.isDashboard && !obj.isDev),
   };
 
   const buttons = {
     name: "Buttons",
-    routes: routes.filter((obj) => obj.isButton),
+    routes: routes.filter((obj) => obj.isButton && !obj.isDev),
   };
 
   const cards = {
     name: "Cards",
-    routes: routes.filter((obj) => obj.isCard),
+    routes: routes.filter((obj) => obj.isCard && !obj.isDev),
   };
 
   const menu = [dashboards, buttons, cards];
@@ -145,7 +138,7 @@ export default () => {
           <StyledNavLink key={route.name} exact={route.exact} to={route.path}>
             <StyledNavLinkButton>
               {route.name}
-              <BadgeSvg />
+              <StyledBadge fill="white" />
             </StyledNavLinkButton>
           </StyledNavLink>
         ))}

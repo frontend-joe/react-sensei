@@ -29,14 +29,37 @@ const barSeries = [
   },
 ];
 
-const statList = [
+const topStats = [
+  {
+    label: "Revenue",
+    value: "$34.5k",
+    icon: "dollar-alt",
+  },
+  {
+    label: "Orders",
+    value: "811",
+    icon: "receipt-alt",
+  },
+  {
+    label: "Profit",
+    value: "$2.3k",
+    icon: "chart-line",
+  },
+  {
+    label: "Users",
+    value: "811",
+    icon: "user",
+  },
+];
+
+const earningsStats = [
   {
     label: "Revenue",
     value: "$34.5k",
   },
   {
     label: "Profit",
-    value: "$2.5k",
+    value: "$2.3k",
   },
   {
     label: "Orders",
@@ -47,22 +70,20 @@ const statList = [
 const Wrapper = () => {
   return (
     <>
-      <div className="col-6 col-lg-3">
-        <StatIconCard label="Revenue" value="$34k" icon="dollar-alt" />
-      </div>
-      <div className="col-6 col-lg-3">
-        <StatIconCard label="Orders" value="811" icon="receipt-alt" />
-      </div>
-      <div className="col-6 col-lg-3">
-        <StatIconCard label="Profit" value="$2.3k" icon="chart-line" />
-      </div>
-      <div className="col-6 col-lg-3">
-        <StatIconCard label="Users" value="762" icon="user" />
-      </div>
+      {topStats.map((card) => (
+        <div className="col-6 col-lg-3">
+          <StatIconCard
+            isPrimary
+            label={card.label}
+            value={card.value}
+            icon={card.icon}
+          />
+        </div>
+      ))}
       <div className="order-lg-2 col-lg-6">
         <AreaChartCard
           cardTitle="Sales"
-          statList={statList}
+          statList={earningsStats}
           series={areaSeries}
         />
       </div>

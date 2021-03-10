@@ -1,0 +1,27 @@
+{
+  "title": "StatBadgeCard",
+  "updated": "10/03/2021",
+  "githubPath": "cards/statBadgeCard",
+  "options": [
+    {
+      "name": "label",
+      "purpose": "The smaller text label displayed",
+      "default": "undefined",
+      "type": "String"
+    },
+    {
+      "name": "value",
+      "purpose": "The larger text value displayed",
+      "default": "undefined",
+      "type": "String"
+    },
+    {
+      "name": "icon",
+      "purpose": "The icon title from the icon pack we are using",
+      "default": "bars",
+      "type": "String",
+      "hyperlink": "https://iconscout.com/unicons/explore/line",
+      "hyperlinkText": "Click here for the icon docs"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "BarGuageChartCard",
+  "updated": "10/03/2021",
+  "githubPath": "cards/barGuageChart",
+  "options": [
+    {
+      "name": "cardTitle",
+      "purpose": "The title of the card",
+      "default": "undefined",
+      "type": "String"
+    },
+    {
+      "name": "label",
+      "purpose": "Label shown on InfoStack above the chart",
+      "default": "undefined",
+      "type": "String"
+    },
+    {
+      "name": "value",
+      "purpose": "Value shown on InfoStack above the chart",
+      "default": "undefined",
+      "type": "String"
+    },
+    {
+      "name": "series",
+      "purpose": "Data associated with the chart",
+      "default": "undefined",
+      "type": "Array"
+    }
+  ]
+}

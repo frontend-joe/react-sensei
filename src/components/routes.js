@@ -1,4 +1,5 @@
-import SalesDashboard from "components/demo/dashboards/SalesDashboard";
+import Dashboard1 from "components/demo/dashboards/Dashboard1";
+import Dashboard2 from "components/demo/dashboards/Dashboard2";
 
 import CleanButton from "components/library/buttons/cleanButton/Example";
 import cleanButtonDocs from "components/library/buttons/cleanButton/docs";
@@ -9,6 +10,9 @@ import simpleCardDocs from "components/library/cards/simpleCard/docs";
 import StatIconCard from "components/library/cards/statIconCard/Example";
 import statIconCardDocs from "components/library/cards/statIconCard/docs";
 
+import StatBadgeCard from "components/library/cards/statBadgeCard/Example";
+import statBadgeCardDocs from "components/library/cards/statBadgeCard/docs";
+
 import PieChartCard from "components/library/cards/pieChartCard/Example";
 import pieChartCardDocs from "components/library/cards/pieChartCard/docs";
 
@@ -18,8 +22,11 @@ import areaChartCardDocs from "components/library/cards/areaChartCard/docs";
 import BarChartCard from "components/library/cards/barChartCard/Example";
 import barChartCardDocs from "components/library/cards/barChartCard/docs";
 
-// import CodeRevealCard from "components/library/cards/codeRevealCard/Example";
-// import codeRevealCardDocs from "components/library/cards/codeRevealCard/docs";
+import BarGuageChart from "components/library/cards/barGuageChart/Example";
+import barGuageChartDocs from "components/library/cards/barGuageChart/docs";
+
+import CodeRevealCard from "components/library/cards/codeRevealCard/Example";
+import codeRevealCardDocs from "components/library/cards/codeRevealCard/docs";
 
 export default [
   {
@@ -34,17 +41,34 @@ export default [
     path: "/dashboards/sales",
     exact: true,
     name: "Dashboard 1",
-    example: SalesDashboard,
+    example: Dashboard1,
     docs: {},
     isDashboard: true,
   },
-  // {
-  //   path: "/cards/code-reveal-card",
-  //   name: "Code Reveal",
-  //   example: CodeRevealCard,
-  //   docs: codeRevealCardDocs,
-  //   isCard: true,
-  // },
+  {
+    path: "/dashboards/covid",
+    exact: true,
+    name: "Dashboard 2",
+    example: Dashboard2,
+    docs: {},
+    isDashboard: true,
+    isDev: true,
+  },
+  {
+    path: "/cards/bar-guage-chart",
+    name: "Bar guage",
+    example: BarGuageChart,
+    docs: barGuageChartDocs,
+    isCard: true,
+  },
+  {
+    path: "/cards/code-reveal-card",
+    name: "Code Reveal",
+    example: CodeRevealCard,
+    docs: codeRevealCardDocs,
+    isCard: true,
+    isDev: true,
+  },
   {
     path: "/cards/simple-card",
     name: "Card",
@@ -57,6 +81,13 @@ export default [
     name: "Stat icon",
     example: StatIconCard,
     docs: statIconCardDocs,
+    isCard: true,
+  },
+  {
+    path: "/cards/stat-badge-card",
+    name: "Stat badge",
+    example: StatBadgeCard,
+    docs: statBadgeCardDocs,
     isCard: true,
   },
   {

@@ -120,21 +120,23 @@ const Docs = ({ docs, setDocsOpen, isDocsOpen }) => {
   const [codeError, setCodeError] = useState();
 
   useEffect(() => {
-    axios
-      .get(
-        `https://raw.githubusercontent.com/frontend-joe/react-sensei/master/src/components/library/${docs?.githubPath}/Example.js`,
-        { crossdomain: true }
-      )
-      .then((response) => {
-        // handle success
-        setCode(response.data);
-        // console.log(response);
-      })
-      .catch(function (error) {
-        setCodeError("Error connecting to GitHub");
-        // handle error
-        console.log(error);
-      });
+    if (process.env.NODE_ENV !== "development") {
+      axios
+        .get(
+          `https://raw.githubusercontent.com/frontend-joe/react-sensei/master/src/components/library/${docs?.githubPath}/Example.js`,
+          { crossdomain: true }
+        )
+        .then((response) => {
+          // handle success
+          setCode(response.data);
+          // console.log(response);
+        })
+        .catch(function (error) {
+          setCodeError("Error connecting to GitHub");
+          // handle error
+          console.log(error);
+        });
+    }
   }, []);
 
   return (

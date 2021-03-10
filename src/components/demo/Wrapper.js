@@ -57,18 +57,20 @@ const Wrapper = ({ setTheme, setFont, isDarkTheme }) => {
           setDocsOpen={setDocsOpen}
           isDocsOpen={isDocsOpen}
         />
-        {routes.map((route) => (
-          <AppRoute
-            key={route.path}
-            exact={route.exact}
-            path={route.path}
-            component={route.example}
-            docs={route.docs}
-            setDocsOpen={setDocsOpen}
-            isDocsOpen={isDocsOpen}
-            isDashboard={route.isDashboard}
-          />
-        ))}
+        {routes
+          .filter((obj) => !obj.isDev)
+          .map((route) => (
+            <AppRoute
+              key={route.path}
+              exact={route.exact}
+              path={route.path}
+              component={route.example}
+              docs={route.docs}
+              setDocsOpen={setDocsOpen}
+              isDocsOpen={isDocsOpen}
+              isDashboard={route.isDashboard}
+            />
+          ))}
         <AppRoute
           component={About}
           hideDocs
