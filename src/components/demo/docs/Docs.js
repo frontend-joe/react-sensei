@@ -25,6 +25,10 @@ const StyledWrapper = styled.div`
   ${(p) => p.isDocsOpen && openStyles};
 
   @media (min-width: ${(p) => p.theme.screenWidthMd}) {
+    width: 50%;
+  }
+
+  @media (min-width: ${(p) => p.theme.screenWidthLg}) {
     display: flex;
     flex-direction: column;
     position: static;
@@ -57,7 +61,7 @@ const StyledCloseButton = styled.button`
   font-size: ${(p) => p.theme.lenLg1};
   color: ${(p) => p.theme.colorLabel};
 
-  @media (min-width: ${(p) => p.theme.screenWidthMd}) {
+  @media (min-width: ${(p) => p.theme.screenWidthLg}) {
     display: none;
   }
 `;

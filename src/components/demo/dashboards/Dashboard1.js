@@ -32,7 +32,7 @@ const barSeries = [
 const topStats = [
   {
     label: "Revenue",
-    value: "$34.5k",
+    value: "$3.5k",
     icon: "dollar-alt",
   },
   {
@@ -82,14 +82,14 @@ const Wrapper = () => {
       ))}
       <div className="order-lg-2 col-lg-6">
         <AreaChartCard
-          cardTitle="Sales"
+          cardTitle="Earnings"
           statList={earningsStats}
           series={areaSeries}
         />
       </div>
       <div className="order-lg-1 col-lg-3">
         <PieChartCard
-          cardTitle="Earnings"
+          cardTitle="Progress"
           label="Target"
           value="$53k"
           series={pieSeries}

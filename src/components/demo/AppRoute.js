@@ -5,6 +5,15 @@ import Docs from "./docs/Docs";
 import DocsToggle from "./docs/DocsToggle";
 import Example from "./example/Example";
 
+const StyledExampleWrapper = styled.div`
+  overflow: auto;
+  flex: 0 1 auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: ${(p) => (p.isDashboard ? "column" : "row")};
+`;
+
 const AppRoute = ({
   path,
   exact,
@@ -17,20 +26,26 @@ const AppRoute = ({
 }) => {
   return (
     <Route exact={exact} path={path}>
-      {!hideDocs && (
-        <Example isDashboard={isDashboard}>
-          {React.createElement(component)}
-        </Example>
-      )}
+      <StyledExampleWrapper isDashboard={isDashboard}>
+        {!hideDocs && (
+          <Example isDashboard={isDashboard}>
+            {React.createElement(component)}
+          </Example>
+        )}
 
-      {hideDocs && React.createElement(component)}
+        {hideDocs && React.createElement(component)}
 
-      {!hideDocs && !isDashboard ? (
-        <>
-          <DocsToggle onClick={() => setDocsOpen(true)} />
-          <Docs docs={docs} setDocsOpen={setDocsOpen} isDocsOpen={isDocsOpen} />
-        </>
-      ) : null}
+        {!hideDocs && !isDashboard ? (
+          <>
+            <DocsToggle onClick={() => setDocsOpen(true)} />
+            <Docs
+              docs={docs}
+              setDocsOpen={setDocsOpen}
+              isDocsOpen={isDocsOpen}
+            />
+          </>
+        ) : null}
+      </StyledExampleWrapper>
     </Route>
   );
 };

@@ -12,6 +12,8 @@ import Bootstrap from "./styles/Bootstrap";
 import About from "./about/About";
 import Settings from "./settings/Settings";
 
+import { isDev } from "components/demo/utils";
+
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -58,7 +60,7 @@ const Wrapper = ({ setTheme, setFont, isDarkTheme }) => {
           isDocsOpen={isDocsOpen}
         />
         {routes
-          .filter((obj) => !obj.isDev)
+          .filter((obj) => !obj.isDev || isDev)
           .map((route) => (
             <AppRoute
               key={route.path}

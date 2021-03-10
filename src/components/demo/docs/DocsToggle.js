@@ -10,7 +10,7 @@ const StyledWrapper = styled.button`
   justify-content: center;
   white-space: nowrap;
 
-  @media (min-width: ${(p) => p.theme.screenWidthMd}) {
+  @media (min-width: ${(p) => p.theme.screenWidthLg}) {
     display: none;
   }
 `;

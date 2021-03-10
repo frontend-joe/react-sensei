@@ -1,0 +1,25 @@
+{
+  "title": "GradientLineChartCard",
+  "updated": "10/03/2021",
+  "githubPath": "cards/gradientLineChart",
+  "options": [
+    {
+      "name": "cardTitle",
+      "purpose": "The title of the card",
+      "default": "undefined",
+      "type": "String"
+    },
+    {
+      "name": "statList",
+      "purpose": "An array of stats to be displayed above the chart",
+      "default": "undefined",
+      "type": "Array"
+    },
+    {
+      "name": "series",
+      "purpose": "Data associated with the chart",
+      "default": "undefined",
+      "type": "Array"
+    }
+  ]
+}

@@ -19,6 +19,9 @@ import pieChartCardDocs from "components/library/cards/pieChartCard/docs";
 import AreaChartCard from "components/library/cards/areaChartCard/Example";
 import areaChartCardDocs from "components/library/cards/areaChartCard/docs";
 
+import GradientLineChartCard from "components/library/cards/gradientLineChart/Example";
+import gradientLineChartCardDocs from "components/library/cards/gradientLineChart/docs";
+
 import BarChartCard from "components/library/cards/barChartCard/Example";
 import barChartCardDocs from "components/library/cards/barChartCard/docs";
 
@@ -102,6 +105,13 @@ export default [
     name: "Area chart",
     example: AreaChartCard,
     docs: areaChartCardDocs,
+    isCard: true,
+  },
+  {
+    path: "/cards/gradient-line-chart-card",
+    name: "Line chart",
+    example: GradientLineChartCard,
+    docs: gradientLineChartCardDocs,
     isCard: true,
   },
   {

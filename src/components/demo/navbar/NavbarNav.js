@@ -112,20 +112,22 @@ const StyledNavLink = styled(NavLink)`
   }
 `;
 
+const isDev = process.env.NODE_ENV === "development";
+
 export default () => {
   const dashboards = {
     name: "Dashboards",
-    routes: routes.filter((obj) => obj.isDashboard && !obj.isDev),
+    routes: routes.filter((obj) => obj.isDashboard && (!obj.isDev || isDev)),
   };
 
   const buttons = {
     name: "Buttons",
-    routes: routes.filter((obj) => obj.isButton && !obj.isDev),
+    routes: routes.filter((obj) => obj.isButton && (!obj.isDev || isDev)),
   };
 
   const cards = {
     name: "Cards",
-    routes: routes.filter((obj) => obj.isCard && !obj.isDev),
+    routes: routes.filter((obj) => obj.isCard && (!obj.isDev || isDev)),
   };
 
   const menu = [dashboards, buttons, cards];

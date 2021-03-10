@@ -13,6 +13,7 @@ export { default as StatIconCard } from "./cards/statIconCard/StatIconCard";
 export { default as StatBadgeCard } from "./cards/statBadgeCard/StatBadgeCard";
 export { default as PieChartCard } from "./cards/pieChartCard/PieChartCard";
 export { default as AreaChartCard } from "./cards/areaChartCard/AreaChartCard";
+export { default as GradientLineChartCard } from "./cards/gradientLineChart/GradientLineChart";
 export { default as BarChartCard } from "./cards/barChartCard/BarChartCard";
 export { default as BarGuageChartCard } from "./cards/barGuageChart/BarGuageChart";
 export { default as CodeRevealCard } from "./cards/codeRevealCard/CodeReveal";
