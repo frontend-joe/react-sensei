@@ -6,6 +6,8 @@ import { InfoStack } from "../../";
 import { CardFixedHeight, ChartWrapper } from "../shared";
 
 const StyledChartHack = styled.div`
+  overflow: hidden;
+
   & svg {
     transform: translateX(25%);
   }
