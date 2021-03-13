@@ -1,0 +1,31 @@
+{
+  "title": "ActivityRings",
+  "updated": "13/03/2021",
+  "githubPath": "cards/activityRings",
+  "options": [
+    {
+      "name": "cardTitle",
+      "purpose": "The title of the card",
+      "default": "undefined",
+      "type": "String"
+    },
+    {
+      "name": "label",
+      "purpose": "The smaller text label displayed",
+      "default": "undefined",
+      "type": "String"
+    },
+    {
+      "name": "value",
+      "purpose": "The larger text value displayed",
+      "default": "undefined",
+      "type": "String"
+    },
+    {
+      "name": "series",
+      "purpose": "Data associated with the chart",
+      "default": "undefined",
+      "type": "Array"
+    }
+  ]
+}

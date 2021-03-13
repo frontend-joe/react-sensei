@@ -10,8 +10,8 @@ const StyledChart = styled.div`
   width: 100%;
 `;
 
-const Wrapper = ({ children }) => {
-  return <StyledChart>{children}</StyledChart>;
+const Wrapper = ({ children, ...rest }) => {
+  return <StyledChart {...rest}>{children}</StyledChart>;
 };
 
 export default Wrapper;

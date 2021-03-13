@@ -1,12 +1,9 @@
 import React from "react";
 import { GradientLineChartCard } from "components/library";
 
-const series = [
-  {
-    name: "series1",
-    data: [0, 35, 10, 44, 10, 0, 0],
-  },
-];
+const data = {
+  series: [[0, 8, 4, 12, 7, 15, 11]],
+};
 
 const statList = [
   {
@@ -29,7 +26,7 @@ export default () => {
       <GradientLineChartCard
         cardTitle="Recovered"
         statList={statList}
-        series={series}
+        data={data}
       />
     </div>
   );

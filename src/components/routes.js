@@ -16,6 +16,9 @@ import statBadgeCardDocs from "components/library/cards/statBadgeCard/docs";
 import PieChartCard from "components/library/cards/pieChartCard/Example";
 import pieChartCardDocs from "components/library/cards/pieChartCard/docs";
 
+import ActivityRingsCard from "components/library/cards/activityRings/Example";
+import activityRingsCardDocs from "components/library/cards/activityRings/docs";
+
 import AreaChartCard from "components/library/cards/areaChartCard/Example";
 import areaChartCardDocs from "components/library/cards/areaChartCard/docs";
 
@@ -55,7 +58,7 @@ export default [
     example: Dashboard2,
     docs: {},
     isDashboard: true,
-    isDev: true,
+    isDev: false,
   },
   {
     path: "/cards/bar-guage-chart",
@@ -98,6 +101,13 @@ export default [
     name: "Pie chart",
     example: PieChartCard,
     docs: pieChartCardDocs,
+    isCard: true,
+  },
+  {
+    path: "/cards/activity-rings-card",
+    name: "Activity rings",
+    example: ActivityRingsCard,
+    docs: activityRingsCardDocs,
     isCard: true,
   },
   {

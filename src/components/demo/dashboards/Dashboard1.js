@@ -4,6 +4,8 @@ import {
   PieChartCard,
   AreaChartCard,
   BarChartCard,
+  BarGuageChartCard,
+  StatBadgeCard,
 } from "components/library";
 
 const pieSeries = [30, 40, 45];
@@ -67,13 +69,27 @@ const earningsStats = [
   },
 ];
 
+const items = [
+  {
+    label: "Total",
+    value: "1.14b",
+  },
+  {
+    label: "Avg",
+    value: "16.22",
+  },
+  {
+    label: "Target",
+    value: 15.44,
+  },
+];
+
 const Wrapper = () => {
   return (
     <>
       {topStats.map((card) => (
         <div className="col-6 col-lg-3">
           <StatIconCard
-            isPrimary
             label={card.label}
             value={card.value}
             icon={card.icon}
@@ -102,6 +118,16 @@ const Wrapper = () => {
           value="234"
           series={barSeries}
         />
+      </div>
+      <div className="col-6 col-lg-3">
+        <StatIconCard label="Trends" value="Shirts" icon="tag-alt" />
+      </div>
+      <div className="col-6 col-lg-3">
+        <StatIconCard label="Hot" value="Socks" icon="trophy" />
+      </div>
+
+      <div className="col-12 col-lg-6">
+        <StatBadgeCard items={items} />
       </div>
     </>
   );

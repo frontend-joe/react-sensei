@@ -22,6 +22,7 @@ const StyledWrapper = styled.div`
     justify-content: center;
     margin-bottom: 0;
     box-shadow: none;
+    background: transparent;
   }
 `;
 

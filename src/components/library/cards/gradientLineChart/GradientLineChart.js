@@ -1,126 +1,135 @@
 import React, { useState, useEffect } from "react";
-import Chart from "react-apexcharts";
+import Chartist from "react-chartist";
+import chartist from "chartist";
 import styled from "styled-components";
 import { rgba } from "polished";
 import { useStyledTheme } from "../../hooks";
-import { InfoStack } from "../../";
-import { CardFixedHeight, ChartWrapper } from "../shared";
 
-const StyledStatList = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
+import { ChartWrapper } from "../shared";
+
+const StyledChartWrapper = styled(ChartWrapper)`
+  transform: translateY(${(p) => p.theme.lenMd3});
+
+  & .ct-chart {
+    width: 100%;
+    height: 170px;
+  }
+
+  & .ct-series .ct-line {
+    stroke: url(#shadowLineChartGradient);
+  }
+
+  & .ct-point {
+    display: none;
+  }
+  & .ct-line-marker {
+    fill: ${(p) => p.theme.colorCardBackground};
+    stroke: ${(p) => p.theme.colorAccent};
+    stroke-width: 4px;
+  }
 `;
 
-const StyledInfoStack = styled(InfoStack)`
-  flex: 1 1 33.33%;
-`;
-
-const Wrapper = ({ cardTitle, statList, series }) => {
+const Wrapper = ({ cardTitle, statList, data }) => {
   const theme = useStyledTheme();
 
+  const eventHandlers = () => {
+    return [
+      // {
+      //   event: "draw",
+      //   fn(ctx) {
+      //     if (ctx.type === "point") {
+      //       if (ctx.index === 5) {
+      //         var circle = new Chartist.Svg(
+      //           "circle",
+      //           {
+      //             cx: ctx.x,
+      //             cy: ctx.y,
+      //             r: 7,
+      //           },
+      //           "ct-line-marker"
+      //         );
+      //         ctx.element.replace(circle);
+      //       }
+      //     }
+      //   },
+      // },
+    ];
+  };
+
   const [options, setOptions] = useState({
-    chart: {
-      toolbar: {
-        show: false,
-      },
-      animations: {
-        enabled: false,
-      },
-      zoom: { enabled: false },
-    },
-    grid: {
-      show: false,
-      padding: {
-        top: 0,
-        right: 0,
-        bottom: 0,
-        left: 0,
+    axisX: {
+      showGrid: false,
+      showLabel: false,
+      labelInterpolationFnc: function (value, index) {
+        return index % 2 === 0 ? value : null;
       },
     },
-    stroke: {
-      show: false,
-    },
-    tooltip: { enabled: false },
-    legend: { show: false },
-    dataLabels: { enabled: false },
-    xaxis: {
-      floating: true,
-      labels: {
-        show: false,
-        offsetY: -10,
-      },
-      axisBorder: {
-        show: false,
-      },
-      axisTicks: {
-        show: false,
-      },
-      maxHeight: 0,
-      categories: [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-      ],
-    },
-    yaxis: {
-      floating: true,
-      offsetX: -20,
-      labels: {
-        show: false,
-      },
-      axisBorder: {
-        show: false,
-      },
-      axisTicks: {
-        show: false,
-      },
-    },
+    axisY: { showLabel: false, showGrid: false },
   });
 
-  useEffect(() => {
-    if (theme.id) {
-      let opacity = 0.65;
-      const colors = [
-        rgba(theme.colorDefaultBackground, opacity),
-        rgba(theme.colorAccent, opacity),
-        rgba(theme.colorPrimary, opacity),
-      ];
-
-      if (theme) {
-        setOptions({
-          ...options,
-          stroke: {
-            type: "solid",
-            colors,
+  const drawPoint = (ctx) => {
+    if (ctx.type === "point") {
+      if (ctx.index === 5) {
+        var circle = new chartist.Svg(
+          "circle",
+          {
+            cx: ctx.x,
+            cy: ctx.y,
+            r: 7,
           },
-        });
+          "ct-line-marker"
+        );
+        ctx.element.replace(circle);
       }
     }
-  }, [theme]);
+  };
+
+  const createGradient = (ctx) => {
+    var defs = ctx.svg.elem("defs");
+    defs
+      .elem("linearGradient", {
+        id: "shadowLineChartGradient",
+        x1: 0,
+        y1: 0,
+        x2: 1,
+        y2: 0,
+      })
+      .elem("stop", {
+        offset: 0,
+        "stop-color": theme.colorCardBackground,
+      })
+      .parent()
+      .elem("stop", {
+        offset: 0.25,
+        "stop-color": theme.colorPrimary,
+      })
+      .parent()
+      .elem("stop", {
+        offset: 0.75,
+        "stop-color": theme.colorAccent,
+      })
+      .parent()
+      .elem("stop", {
+        offset: 1,
+        "stop-color": theme.colorCardBackground,
+      })
+      .parent();
+  };
 
   return (
-    <CardFixedHeight cardTitle={cardTitle}>
-      {statList && (
-        <StyledStatList>
-          {statList.map((stat) => (
-            <StyledInfoStack value={stat.value} label={stat.label} />
-          ))}
-        </StyledStatList>
+    <StyledChartWrapper>
+      {options && data && (
+        <Chartist
+          listener={{
+            created: createGradient,
+            draw: drawPoint,
+          }}
+          options={options}
+          data={data}
+          type="Line"
+        />
       )}
-      <ChartWrapper>
-        {options.fill && (
-          <Chart options={options} series={series} type="line" width="100%" />
-        )}
-      </ChartWrapper>
-    </CardFixedHeight>
+    </StyledChartWrapper>
   );
 };
 

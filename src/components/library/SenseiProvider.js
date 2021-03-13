@@ -128,6 +128,11 @@ const Wrapper = ({
             rel="stylesheet"
             href={`https://fonts.googleapis.com/css2?family=${theme.fontFamily}:wght@${theme.fontWeightRegular};${theme.fontWeightSemibold};${theme.fontWeightBold}&display=swap`}
           />
+
+          <link
+            rel="stylesheet"
+            href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css"
+          />
         </Helmet>
         {children}
       </HelmetProvider>

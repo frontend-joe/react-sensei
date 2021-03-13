@@ -3,6 +3,8 @@ import {
   StatIconCard,
   StatBadgeCard,
   BarGuageChartCard,
+  GradientLineChartCard,
+  ActivityRingsCard,
 } from "components/library";
 
 const items = [
@@ -35,6 +37,25 @@ const survival = [
   },
 ];
 
+const lineData = {
+  series: [[0, 8, 4, 12, 7, 15, 11]],
+};
+
+const lineStats = [
+  {
+    label: "This week",
+    value: "112k",
+  },
+  {
+    label: "This month",
+    value: "240k",
+  },
+  {
+    label: "This year",
+    value: "564k",
+  },
+];
+
 const Wrapper = () => {
   return (
     <>
@@ -53,6 +74,21 @@ const Wrapper = () => {
           label="Current rate"
           value="99.8%"
           series={survival}
+        />
+      </div>
+      <div className="col-md-6">
+        <GradientLineChartCard
+          cardTitle="Recovered"
+          statList={lineStats}
+          data={lineData}
+        />
+      </div>
+      <div className="col-md-3">
+        <ActivityRingsCard
+          cardTitle="Earnings"
+          label="Target"
+          value="$53k"
+          series={[30, 40, 45]}
         />
       </div>
     </>
