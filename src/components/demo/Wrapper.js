@@ -11,6 +11,7 @@ import Navbar from "./navbar/Navbar";
 import Bootstrap from "./styles/Bootstrap";
 import About from "./about/About";
 import Settings from "./settings/Settings";
+import Plaque from "./plaque/Plaque";
 
 import { isDev } from "components/demo/utils";
 
@@ -43,6 +44,7 @@ const Wrapper = ({ setTheme, setFont, isDarkTheme }) => {
       />
       <Bootstrap />
       <Navbar />
+      <Plaque />
       <SettingsToggle onClick={() => setSettingsOpen(true)} />
       <Settings
         isSettingsOpen={isSettingsOpen}

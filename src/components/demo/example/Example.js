@@ -2,6 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 const dashboardStyles = css`
+  padding: 0 0 ${(p) => p.theme.lenMd3};
   align-items: flex-start;
   justify-content: flex-start;
 `;

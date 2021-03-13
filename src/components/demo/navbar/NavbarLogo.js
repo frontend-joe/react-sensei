@@ -6,17 +6,19 @@ import { createImageCdnLink } from "../utils";
 import { SenseiLogo } from "components/library";
 
 const StyledWrapper = styled.div`
+  display: none;
   position: relative;
   z-index: 2;
   flex: 0 1 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   padding: 0 ${(p) => p.theme.lenMd1} 0;
   background: ${(p) => p.theme.colorPrimary};
   box-shadow: 0 0 10px ${rgba("black", 0.2)};
 
   @media (min-width: ${(p) => p.theme.screenWidthMd}) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex: 0 0 auto;
     padding: ${(p) => p.theme.lenMd3};
     justify-content: center;

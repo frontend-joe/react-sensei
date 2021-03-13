@@ -6,6 +6,7 @@ import DocsToggle from "./docs/DocsToggle";
 import Example from "./example/Example";
 
 const StyledExampleWrapper = styled.div`
+  position: relative;
   overflow: auto;
   flex: 0 1 auto;
   height: 100%;
@@ -31,14 +32,6 @@ const AppRoute = ({
   return (
     <Route exact={exact} path={path}>
       <StyledExampleWrapper isDashboard={isDashboard}>
-        {!hideDocs && (
-          <Example isDashboard={isDashboard}>
-            {React.createElement(component)}
-          </Example>
-        )}
-
-        {hideDocs && React.createElement(component)}
-
         {!hideDocs && !isDashboard ? (
           <>
             <DocsToggle onClick={() => setDocsOpen(true)} />
@@ -49,6 +42,14 @@ const AppRoute = ({
             />
           </>
         ) : null}
+
+        {!hideDocs && (
+          <Example isDashboard={isDashboard}>
+            {React.createElement(component)}
+          </Example>
+        )}
+
+        {hideDocs && React.createElement(component)}
       </StyledExampleWrapper>
     </Route>
   );

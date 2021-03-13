@@ -41,3 +41,5 @@ export { default as SettingsThemePicker } from "./settings/SettingsThemePicker";
 export { default as SettingsFontPicker } from "./settings/SettingsFontPicker";
 
 export { default as SenseiLogo } from "./svgs/SenseiLogo";
+export { default as SenseiIcon } from "./svgs/SenseiIcon";
+export { default as SenseiSquare } from "./svgs/SenseiSquare";

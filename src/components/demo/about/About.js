@@ -13,7 +13,8 @@ const StyledWrapper = styled.div`
   width: 100%;
   overflow: auto;
   height: 100%;
-  padding: ${(p) => p.theme.lenMd3};
+  padding: ${(p) => p.theme.lenMd3} ${(p) => p.theme.lenMd3}
+    ${(p) => p.theme.lenXl1};
   background: ${(p) => p.theme.colorCardBackground};
 
   @media (min-width: ${(p) => p.theme.screenWidthMd}) {

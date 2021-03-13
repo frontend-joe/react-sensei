@@ -6,7 +6,7 @@ const StyledIcon = styled.span`
 `;
 
 const Wrapper = ({ children, ...rest }) => {
-  return <StyledIcon className={`uil uil-${children}`} {...rest} />;
+  return <StyledIcon {...rest} className={`uil uil-${children}`} />;
 };
 
 export default Wrapper;

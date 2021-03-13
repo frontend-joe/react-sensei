@@ -1,3 +1,5 @@
+import About from "components/demo/about/About";
+
 import Dashboard1 from "components/demo/dashboards/Dashboard1";
 import Dashboard2 from "components/demo/dashboards/Dashboard2";
 
@@ -35,6 +37,13 @@ import CodeRevealCard from "components/library/cards/codeRevealCard/Example";
 import codeRevealCardDocs from "components/library/cards/codeRevealCard/docs";
 
 export default [
+  {
+    path: "/",
+    exact: true,
+    name: "About",
+    example: About,
+    docs: {},
+  },
   {
     path: "/buttons/clean",
     exact: true,

@@ -1,13 +1,16 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
+import { Unicon } from "components/library";
 
 const StyledWrapper = styled.button`
+  position: absolute;
+  top: 0;
+  right: 0;
   flex: 0 0 ${(p) => p.theme.lenXl1};
-  padding: 0 ${(p) => p.theme.lenMd1};
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   white-space: nowrap;
 
   @media (min-width: ${(p) => p.theme.screenWidthXl}) {
@@ -17,18 +20,20 @@ const StyledWrapper = styled.button`
 
 const StyledButton = styled.span`
   display: flex;
-  width: 100%;
   align-items: center;
   justify-content: center;
   border-radius: ${(p) => p.theme.lenLg1};
   padding: 0 ${(p) => p.theme.lenMd3};
-  height: ${(p) => p.theme.lenLg2};
-  background: ${(p) => p.theme.colorPrimary};
-  color: ${(p) => p.theme.colorPrimaryText};
+  height: ${(p) => p.theme.lenLg3};
+  background: transparent;
+  color: ${(p) => p.theme.colorText};
+`;
 
-  @media (min-width: ${(p) => p.theme.screenWidthSm}) {
-    width: 55%;
-  }
+const StyledButtonText = styled.span``;
+
+const StyledButtonIcon = styled(Unicon)`
+  font-size: 30px;
+  color: red;
 `;
 
 const Wrapper = ({ onClick }) => {
@@ -36,7 +41,10 @@ const Wrapper = ({ onClick }) => {
 
   return !location?.pathname?.includes("dashboard") ? (
     <StyledWrapper onClick={onClick}>
-      <StyledButton>View docs</StyledButton>
+      <StyledButton>
+        <StyledButtonText>View docs</StyledButtonText>
+        <StyledButtonIcon>angle-right</StyledButtonIcon>
+      </StyledButton>
     </StyledWrapper>
   ) : null;
 };
