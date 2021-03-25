@@ -1,11 +1,11 @@
 import React from "react";
 import {
-  StatIconCard,
+  IconFigureCard,
   PieChartCard,
   AreaChartCard,
   BarChartCard,
   BarGuageChartCard,
-  StatBadgeCard,
+  BadgeFiguresCard,
 } from "components/library";
 
 const pieSeries = [30, 40, 45];
@@ -89,7 +89,7 @@ const Wrapper = () => {
     <>
       {topStats.map((card) => (
         <div className="col-6 col-lg-3">
-          <StatIconCard
+          <IconFigureCard
             label={card.label}
             value={card.value}
             icon={card.icon}
@@ -120,14 +120,14 @@ const Wrapper = () => {
         />
       </div>
       <div className="col-6 col-lg-3">
-        <StatIconCard label="Trends" value="Shirts" icon="tag-alt" />
+        <IconFigureCard label="Trends" value="Shirts" icon="tag-alt" />
       </div>
       <div className="col-6 col-lg-3">
-        <StatIconCard label="Hot" value="Socks" icon="trophy" />
+        <IconFigureCard label="Hot" value="Socks" icon="trophy" />
       </div>
 
       <div className="col-12 col-lg-6">
-        <StatBadgeCard items={items} />
+        <BadgeFiguresCard items={items} />
       </div>
     </>
   );

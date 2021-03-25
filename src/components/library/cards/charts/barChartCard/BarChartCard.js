@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Chart from "react-apexcharts";
 import styled from "styled-components";
-import { useStyledTheme } from "../../hooks";
-import { InfoStack } from "../../";
+import { useStyledTheme } from "../../../hooks";
+import { InfoStack } from "../../../";
 import { CardFixedHeight, ChartWrapper } from "../shared";
 
 const Wrapper = ({ cardTitle, label, value, series }) => {

@@ -6,7 +6,7 @@ const StyledSvg = styled.svg`
 `;
 
 const StyledPath = styled.path`
-  fill: ${(p) => (p.isPrimary ? p.theme.colorPrimary : "#100f10")};
+  fill: ${(p) => (p.isPrimary ? p.theme.colorPrimary : p.theme.colorText)};
 `;
 
 const Wrapper = ({ imageSize = "80px" }) => {
@@ -28,9 +28,7 @@ const Wrapper = ({ imageSize = "80px" }) => {
         isPrimary
         d="M52.7357 68.058C58.8503 69.1972 65.2828 69.7589 71.5777 69.7589C77.2332 69.7589 82.8625 69.3054 88.1209 68.375V72.1115L70.4284 80.5376L52.7357 72.1115V68.058Z"
       />
-      <path
-        stroke="#100f10"
-        fill="#100f10"
+      <StyledPath
         fillRule="evenodd"
         clipRule="evenodd"
         d="M101.096 61.1879L70.7701 38L39.7695 61.1879C40.9392 61.6482 42.1464 62.079 43.3857 62.4805C60.161 67.9138 82.8105 67.9506 97.661 62.5907C98.8592 62.1582 100.007 61.6906 101.096 61.1879ZM94.5899 60.2425L70.749 42.0133L46.5682 60.1001C54.1443 62.2687 62.8627 63.3769 71.4415 63.3769C79.893 63.3769 87.9992 62.3017 94.5899 60.2425Z"

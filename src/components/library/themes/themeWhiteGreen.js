@@ -26,5 +26,6 @@ export default {
   colorDisabledBackground: "#d5d5e3",
   colorDisabledText: "#bebed0",
   colorCode: "#100f10",
-  boxShadowLogo: `0px 0px 20px ${rgba("black", 0.12)}`,
+  colorChartShading: "#696969",
+  boxShadowLogo: `none`,
 };

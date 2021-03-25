@@ -13,6 +13,7 @@ import {
   themeDarkOrange,
   themeLightClaret,
   themeLightBlue,
+  themeDarkPurpleGreen,
 } from "./";
 
 const Global = createGlobalStyle`
@@ -53,6 +54,7 @@ const Wrapper = ({
     themeDarkOrange,
     themeLightClaret,
     themeLightBlue,
+    themeDarkPurpleGreen,
   ];
 
   useEffect(() => {

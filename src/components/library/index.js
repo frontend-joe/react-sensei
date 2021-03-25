@@ -8,16 +8,20 @@ export { default as InfoStack } from "./common/InfoStack";
 
 export { default as CleanButton } from "./buttons/cleanButton/CleanButton";
 
-export { default as Card } from "./cards/simpleCard/SimpleCard";
-export { default as StatIconCard } from "./cards/statIconCard/StatIconCard";
-export { default as StatBadgeCard } from "./cards/statBadgeCard/StatBadgeCard";
-export { default as PieChartCard } from "./cards/pieChartCard/PieChartCard";
-export { default as ActivityRingsCard } from "./cards/activityRings/ActivityRings";
-export { default as AreaChartCard } from "./cards/areaChartCard/AreaChartCard";
-export { default as GradientLineChartCard } from "./cards/gradientLineChart/GradientLineWrapper";
-export { default as BarChartCard } from "./cards/barChartCard/BarChartCard";
-export { default as BarGuageChartCard } from "./cards/barGuageChart/BarGuageChart";
-export { default as CodeRevealCard } from "./cards/codeRevealCard/CodeReveal";
+export { default as Card } from "./cards/card/SimpleCard";
+
+export { default as IconFigureCard } from "./cards/figures/iconFigure/IconFigure";
+export { default as BadgeFiguresCard } from "./cards/figures/badgeFigures/BadgeFigures";
+
+export { default as PieChartCard } from "./cards/charts/pieChartCard/PieChartCard";
+export { default as ActivityRingsCard } from "./cards/charts/activityRings/ActivityRings";
+export { default as AreaChartCard } from "./cards/charts/areaChartCard/AreaChartCard";
+export { default as AreaChart2 } from "./cards/charts/areaChart2/Wrapper";
+export { default as GradientLineChartCard } from "./cards/charts/gradientLineChart/GradientLineWrapper";
+export { default as BarChartCard } from "./cards/charts/barChartCard/BarChartCard";
+export { default as BarGuageChartCard } from "./cards/charts/barGuageChart/BarGuageChart";
+
+export { default as CodeRevealCard } from "./cards/misc/codeRevealCard/CodeReveal";
 
 export { default as Unicon } from "./icons/Unicon";
 
@@ -25,6 +29,7 @@ export { default as themeLightPurple } from "./themes/themeLightPurple";
 export { default as themeLightClaret } from "./themes/themeLightClaret";
 export { default as themeLightBlue } from "./themes/themeLightBlue";
 export { default as themeDark } from "./themes/themeDark";
+export { default as themeDarkPurpleGreen } from "./themes/themeDarkPurpleGreen";
 export { default as themeDarkRed } from "./themes/themeDarkRed";
 export { default as themeDarkGold } from "./themes/themeDarkGold";
 export { default as themeDarkRoseGold } from "./themes/themeDarkRoseGold";

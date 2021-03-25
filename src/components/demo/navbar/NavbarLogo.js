@@ -56,7 +56,7 @@ const StyledSvgBackground = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
+  background: ${(p) => p.theme.colorBackground};
   position: relative;
   z-index: 1;
   border-radius: ${(p) => p.theme.borderRadius};

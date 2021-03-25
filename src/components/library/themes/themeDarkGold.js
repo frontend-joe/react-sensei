@@ -25,5 +25,6 @@ export default {
   colorDisabledBackground: "#3d3d3d",
   colorDisabledText: "#6b6666",
   colorCode: "#242424",
+  colorChartShading: "white",
   boxShadowLogo: "none",
 };

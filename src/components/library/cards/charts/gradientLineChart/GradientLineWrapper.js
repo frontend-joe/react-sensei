@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { useStyledTheme } from "../../hooks";
+import { useStyledTheme } from "../../../hooks";
 import GradientLineChart from "./GradientLineChart";
-import { InfoStack } from "../../";
+import { InfoStack } from "../../../";
 import { CardFixedHeight } from "../shared";
 
 const StyledStatList = styled.div`
@@ -31,7 +31,7 @@ const Wrapper = ({ cardTitle, statList, data }) => {
     if (theme.id !== prevThemeId) {
       setTimeout(() => {
         setThemeLoaded(true);
-      }, 250);
+      }, 10);
     }
   }, [theme.id]);
 

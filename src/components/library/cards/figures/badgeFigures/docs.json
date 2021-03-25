@@ -1,7 +1,7 @@
 {
-  "title": "StatBadgeCard",
+  "title": "BadgeFiguresCard",
   "updated": "10/03/2021",
-  "githubPath": "cards/statBadgeCard",
+  "githubPath": "cards/badgeFigures",
   "options": [
     {
       "name": "label",

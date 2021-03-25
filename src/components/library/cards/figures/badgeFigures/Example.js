@@ -1,5 +1,5 @@
 import React from "react";
-import { StatBadgeCard } from "components/library";
+import { BadgeFiguresCard } from "components/library";
 
 const items = [
   {
@@ -19,7 +19,7 @@ const items = [
 export default () => {
   return (
     <div className="col-md-8 offset-md-2 col-xl-10 offset-xl-1">
-      <StatBadgeCard items={items} />
+      <BadgeFiguresCard items={items} />
     </div>
   );
 };

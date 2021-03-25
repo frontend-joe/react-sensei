@@ -23,6 +23,7 @@ export default {
   colorDefaultText: "#73707C",
   colorDisabledBackground: "#d5d5e3",
   colorDisabledText: "#bebed0",
-  colorCode: "#100f10",
+  colorCode: "#a5a5a5",
+  colorChartShading: "#696969",
   boxShadowLogo: "none",
 };

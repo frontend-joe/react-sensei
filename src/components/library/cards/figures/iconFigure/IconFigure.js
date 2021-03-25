@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { rgba } from "polished";
-import { Card } from "../../";
+import { Card } from "../../../";
 
 const StyledCard = styled(Card)`
   display: flex;

@@ -3,7 +3,7 @@ import Chartist from "react-chartist";
 import chartist from "chartist";
 import styled from "styled-components";
 import { rgba } from "polished";
-import { useStyledTheme } from "../../hooks";
+import { useStyledTheme } from "../../../hooks";
 
 import { ChartWrapper } from "../shared";
 
@@ -57,6 +57,13 @@ const Wrapper = ({ cardTitle, statList, data }) => {
   };
 
   const [options, setOptions] = useState({
+    fullWidth: true,
+    chartPadding: {
+      top: 20,
+      right: 0,
+      bottom: 0,
+      left: -40,
+    },
     axisX: {
       showGrid: false,
       showLabel: false,
@@ -69,7 +76,7 @@ const Wrapper = ({ cardTitle, statList, data }) => {
 
   const drawPoint = (ctx) => {
     if (ctx.type === "point") {
-      if (ctx.index === 5) {
+      if (ctx.index === 6) {
         var circle = new chartist.Svg(
           "circle",
           {

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { rgba } from "polished";
-import { useStyledTheme } from "../../hooks";
-import { Card, Badge, InfoStack } from "../../";
+import { useStyledTheme } from "../../../hooks";
+import { Card, Badge, InfoStack } from "../../../";
 
 const StyledCard = styled(Card)`
   display: flex;
@@ -31,7 +31,7 @@ const StyledBadge = styled(Badge)`
   margin-right: ${(p) => p.theme.lenMd1};
 `;
 
-const Wrapper = ({ items }) => {
+const Wrapper = ({ items, badgeSize, badgeFill }) => {
   const theme = useStyledTheme();
 
   const colors = [
@@ -47,7 +47,11 @@ const Wrapper = ({ items }) => {
           items &&
           items.map((item, index) => (
             <StyledCol>
-              <StyledBadge size="lg" fill={colors[index]} />
+              <StyledBadge
+                size={badgeSize || "lg"}
+                fill={badgeFill || colors[index]}
+                icon={item.icon}
+              />
               <InfoStack
                 hideBottomMargin
                 alignItems="flex-start"

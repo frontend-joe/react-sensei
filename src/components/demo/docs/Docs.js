@@ -15,6 +15,8 @@ const StyledWrapper = styled.div`
   z-index: 6;
   right: 0;
   bottom: 0;
+  display: flex;
+  flex-direction: column;
   transform: translateX(100%);
   background: ${(p) => p.theme.colorCardBackground};
   color: ${(p) => p.theme.colorText};

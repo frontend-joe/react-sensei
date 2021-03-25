@@ -4,6 +4,7 @@ import { v4 as uidv4 } from "uuid";
 import {
   themeLightPurple,
   themeDark,
+  themeDarkPurpleGreen,
   themeWhite,
   themeWhiteGreen,
   themeDarkRed,
@@ -14,6 +15,7 @@ import {
   themeLightBlue,
   useStyledTheme,
 } from "../";
+import { Badge } from "../";
 
 const circleSize = "2rem";
 
@@ -52,7 +54,7 @@ const StyledThemeAccent = styled.span`
   background: ${(p) => p.background};
 `;
 
-const StyledBadge = styled.span`
+const StyledBadge = styled(Badge)`
   position: absolute;
   top: -8px;
   right: -6px;
@@ -79,6 +81,7 @@ const themes = [
   themeLightClaret,
   themeDarkRoseGold,
   themeLightBlue,
+  themeDarkPurpleGreen,
 ];
 
 const Wrapper = ({ extraThemes, setTheme }) => {
@@ -92,11 +95,7 @@ const Wrapper = ({ extraThemes, setTheme }) => {
     <StyledThemesWrapper>
       {themes.map((t) => (
         <StyledTheme key={uidv4()} onClick={() => setTheme(t)}>
-          {t.id === theme.id && (
-            <StyledBadge>
-              <i className="uil uil-check"></i>
-            </StyledBadge>
-          )}
+          {t.id === theme.id && <StyledBadge icon="check" />}
 
           <StyledThemePrimary background={t.colorBackground} />
           <StyledThemeAccent background={t.colorPrimary} />

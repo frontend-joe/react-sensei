@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled, { keyframes, css } from "styled-components";
-import { Card, CleanButton } from "../../";
+import { Card, CleanButton } from "../../../";
 
 const boxSize = 56;
 const duration = 5000;

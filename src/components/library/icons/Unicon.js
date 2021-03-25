@@ -5,8 +5,8 @@ const StyledIcon = styled.span`
   font-size: inherit;
 `;
 
-const Wrapper = ({ children, ...rest }) => {
-  return <StyledIcon {...rest} className={`uil uil-${children}`} />;
+const Wrapper = ({ children }) => {
+  return <StyledIcon className={`uil uil-${children}`} />;
 };
 
 export default Wrapper;

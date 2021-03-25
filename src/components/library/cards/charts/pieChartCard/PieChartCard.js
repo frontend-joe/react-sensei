@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Chart from "react-apexcharts";
 import styled from "styled-components";
-import { useStyledTheme } from "../../hooks";
-import { Card, InfoStack } from "../../";
+import { useStyledTheme } from "../../../hooks";
+import { Card, InfoStack } from "../../../";
 
 const StyledCard = styled(Card)`
   height: ${(p) => p.theme.heightCardMd};
@@ -44,57 +44,19 @@ const Wrapper = ({ cardTitle, value, label, series }) => {
     },
     grid: {
       padding: {
-        top: 10,
+        top: 40,
         left: 0,
         right: 0,
-        bottom: 10,
+        bottom: 20,
       },
     },
     stroke: {
-      show: true,
-      curve: "smooth",
-      lineCap: "round",
-      colors: undefined,
-      width: 0,
-      dashArray: 0,
+      show: false,
     },
     tooltip: { enabled: false },
     legend: { show: false },
     dataLabels: { enabled: false },
-    plotOptions: {
-      radialBar: {
-        offsetX: 0,
-        offsetY: 0,
-        hollow: {
-          margin: 0,
-          size: "35%",
-          position: "front",
-          dropShadow: {
-            enabled: false,
-            top: 0,
-            left: 0,
-            blur: 3,
-            opacity: 0.5,
-          },
-        },
-        track: {
-          show: true,
-          startAngle: undefined,
-          endAngle: undefined,
-          background: theme.colorBackground,
-          strokeWidth: "97%",
-          opacity: 1,
-          margin: 5,
-          dropShadow: {
-            enabled: false,
-            top: 0,
-            left: 0,
-            blur: 3,
-            opacity: 0.5,
-          },
-        },
-      },
-    },
+    plotOptions: { pie: { donut: { size: "75%" } } },
   });
 
   const colors = [
@@ -108,16 +70,6 @@ const Wrapper = ({ cardTitle, value, label, series }) => {
       setOptions({
         ...options,
         colors,
-        plotOptions: {
-          ...options.plotOptions,
-          radialBar: {
-            ...options.plotOptions.radialBar,
-            track: {
-              ...options.plotOptions.radialBar.track,
-              background: theme.colorBackground,
-            },
-          },
-        },
       });
     }
   }, [theme]);
@@ -131,7 +83,7 @@ const Wrapper = ({ cardTitle, value, label, series }) => {
             <Chart
               options={options}
               series={series}
-              type="radialBar"
+              type="donut"
               width="100%"
             />
           )}

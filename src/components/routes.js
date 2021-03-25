@@ -2,39 +2,43 @@ import About from "components/demo/about/About";
 
 import Dashboard1 from "components/demo/dashboards/Dashboard1";
 import Dashboard2 from "components/demo/dashboards/Dashboard2";
+import Dashboard3 from "components/demo/dashboards/Dashboard3";
 
 import CleanButton from "components/library/buttons/cleanButton/Example";
 import cleanButtonDocs from "components/library/buttons/cleanButton/docs";
 
-import SimpleCard from "components/library/cards/simpleCard/Example";
-import simpleCardDocs from "components/library/cards/simpleCard/docs";
+import SimpleCard from "components/library/cards/card/Example";
+import simpleCardDocs from "components/library/cards/card/docs";
 
-import StatIconCard from "components/library/cards/statIconCard/Example";
-import statIconCardDocs from "components/library/cards/statIconCard/docs";
+import StatIconCard from "components/library/cards/figures/iconFigure/Example";
+import statIconCardDocs from "components/library/cards/figures/iconFigure/docs";
 
-import StatBadgeCard from "components/library/cards/statBadgeCard/Example";
-import statBadgeCardDocs from "components/library/cards/statBadgeCard/docs";
+import StatBadgeCard from "components/library/cards/figures/badgeFigures/Example";
+import statBadgeCardDocs from "components/library/cards/figures/badgeFigures/docs";
 
-import PieChartCard from "components/library/cards/pieChartCard/Example";
-import pieChartCardDocs from "components/library/cards/pieChartCard/docs";
+import PieChartCard from "components/library/cards/charts/pieChartCard/Example";
+import pieChartCardDocs from "components/library/cards/charts/pieChartCard/docs";
 
-import ActivityRingsCard from "components/library/cards/activityRings/Example";
-import activityRingsCardDocs from "components/library/cards/activityRings/docs";
+import ActivityRingsCard from "components/library/cards/charts/activityRings/Example";
+import activityRingsCardDocs from "components/library/cards/charts/activityRings/docs";
 
-import AreaChartCard from "components/library/cards/areaChartCard/Example";
-import areaChartCardDocs from "components/library/cards/areaChartCard/docs";
+import AreaChartCard from "components/library/cards/charts/areaChartCard/Example";
+import areaChartCardDocs from "components/library/cards/charts/areaChartCard/docs";
 
-import GradientLineChartCard from "components/library/cards/gradientLineChart/Example";
-import gradientLineChartCardDocs from "components/library/cards/gradientLineChart/docs";
+import AreaChart2 from "components/library/cards/charts/areaChart2/Example";
+import areaChart2Docs from "components/library/cards/charts/areaChart2/docs";
 
-import BarChartCard from "components/library/cards/barChartCard/Example";
-import barChartCardDocs from "components/library/cards/barChartCard/docs";
+import GradientLineChartCard from "components/library/cards/charts/gradientLineChart/Example";
+import gradientLineChartCardDocs from "components/library/cards/charts/gradientLineChart/docs";
 
-import BarGuageChart from "components/library/cards/barGuageChart/Example";
-import barGuageChartDocs from "components/library/cards/barGuageChart/docs";
+import BarChartCard from "components/library/cards/charts/barChartCard/Example";
+import barChartCardDocs from "components/library/cards/charts/barChartCard/docs";
 
-import CodeRevealCard from "components/library/cards/codeRevealCard/Example";
-import codeRevealCardDocs from "components/library/cards/codeRevealCard/docs";
+import BarGuageChart from "components/library/cards/charts/barGuageChart/Example";
+import barGuageChartDocs from "components/library/cards/charts/barGuageChart/docs";
+
+import CodeRevealCard from "components/library/cards/misc/codeRevealCard/Example";
+import codeRevealCardDocs from "components/library/cards/misc/codeRevealCard/docs";
 
 export default [
   {
@@ -65,6 +69,15 @@ export default [
     exact: true,
     name: "Dashboard 2",
     example: Dashboard2,
+    docs: {},
+    isDashboard: true,
+    isDev: false,
+  },
+  {
+    path: "/dashboards/3",
+    exact: true,
+    name: "Dashboard 3",
+    example: Dashboard3,
     docs: {},
     isDashboard: true,
     isDev: false,
@@ -124,6 +137,13 @@ export default [
     name: "Area chart",
     example: AreaChartCard,
     docs: areaChartCardDocs,
+    isCard: true,
+  },
+  {
+    path: "/cards/area-chart-card2",
+    name: "Area chart 2",
+    example: AreaChart2,
+    docs: areaChart2Docs,
     isCard: true,
   },
   {

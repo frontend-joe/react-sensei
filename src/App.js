@@ -9,6 +9,8 @@ export default () => {
   const [theme, setTheme] = useState({});
 
   const handleThemeSet = (activeTheme) => {
+    console.log("handleThemeSet", activeTheme);
+
     localStorage.setItem("sensei-theme", activeTheme.id);
     setTheme({
       ...activeTheme,

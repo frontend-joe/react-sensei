@@ -5,7 +5,7 @@ const colorLabel = rgba("white", 0.57);
 const colorText = rgba("white", 0.96);
 
 export default {
-  id: "dark",
+  id: "darkPurpleGreen",
   ...themeDefault,
   borderRadius: "1rem",
   colorBackground: "#242424",
@@ -15,9 +15,9 @@ export default {
   colorText: colorText,
   colorLabel: colorLabel,
   colorBorder: "#393939",
-  colorPrimary: "#8739F9",
+  colorPrimary: "#A740F4",
   colorPrimaryText: colorText,
-  colorAccent: "#00AAF2",
+  colorAccent: "#36ECD7",
   colorAccentText: colorText,
   colorCardBackground: "#1B1B1B",
   colorDefaultBackground: "#2D2D2D",

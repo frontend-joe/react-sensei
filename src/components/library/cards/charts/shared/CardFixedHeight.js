@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Card } from "../../";
+import { Card } from "../../../";
 
 const StyledCard = styled(Card)`
   height: ${(p) => p.theme.heightCardMd};

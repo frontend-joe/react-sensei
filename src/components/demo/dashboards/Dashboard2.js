@@ -1,10 +1,11 @@
 import React from "react";
 import {
-  StatIconCard,
-  StatBadgeCard,
+  IconFigureCard,
+  BadgeFiguresCard,
   BarGuageChartCard,
   GradientLineChartCard,
   ActivityRingsCard,
+  useStyledTheme,
 } from "components/library";
 
 const items = [
@@ -19,6 +20,24 @@ const items = [
   {
     label: "Target",
     value: 15.44,
+  },
+];
+
+const items2 = [
+  {
+    label: "Total",
+    value: "1.14b",
+    icon: "dollar-alt",
+  },
+  {
+    label: "Avg",
+    value: "16.22",
+    icon: "arrow-growth",
+  },
+  {
+    label: "Target",
+    value: 15.44,
+    icon: "hunting",
   },
 ];
 
@@ -38,7 +57,7 @@ const survival = [
 ];
 
 const lineData = {
-  series: [[0, 8, 4, 12, 7, 15, 11]],
+  series: [[0, 2, 8, 4, 12, 7, 15, 11, 10]],
 };
 
 const lineStats = [
@@ -57,16 +76,18 @@ const lineStats = [
 ];
 
 const Wrapper = () => {
+  const theme = useStyledTheme();
+
   return (
     <>
       <div className="col-6 col-lg-3">
-        <StatIconCard label="Cases" value="161k" icon="bed" />
+        <IconFigureCard label="Cases" value="161k" icon="bed" />
       </div>
       <div className="col-6 col-lg-3">
-        <StatIconCard label="Healthy" value="988k" icon="heart" />
+        <IconFigureCard label="Healthy" value="988k" icon="heart" />
       </div>
       <div className="col-12 col-lg-6">
-        <StatBadgeCard items={items} />
+        <BadgeFiguresCard items={items} />
       </div>
       <div className="col-md-3">
         <BarGuageChartCard
@@ -90,6 +111,19 @@ const Wrapper = () => {
           value="$53k"
           series={[30, 40, 45]}
         />
+      </div>
+      <div className="col-12 col-lg-6">
+        <BadgeFiguresCard
+          badgeFill={theme.colorPrimary}
+          badgeSize="xl"
+          items={items2}
+        />
+      </div>
+      <div className="col-6 col-lg-3">
+        <IconFigureCard label="Cases" value="161k" icon="bed" />
+      </div>
+      <div className="col-6 col-lg-3">
+        <IconFigureCard label="Healthy" value="988k" icon="heart" />
       </div>
     </>
   );
